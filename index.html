@@ -2,10 +2,76 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Untitled Document</title>
+<title>GraphiDimi</title>
+<style>
+* {
+	box-sizing:border-box;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+h1, p { margin:1em; font-size:70%; }
+
+#col-seances {
+	width:200px;
+	border-right:1px solid hsl(300,33%,30%);
+	float:left;
+	margin:2em;
+	font-size:70%;
+}
+
+#col-seances-titre {
+	padding:0.5em;
+	background-color:hsl(300,33%,30%);
+	color:white;
+}
+
+#col-seances-content, #col-exemples-content {
+	padding:0.5em;
+	line-height:1.9em;
+}
+
+#col-exemples {
+	width:400px;
+	border-right:1px solid hsl(48,100%,50%);
+	float:left;
+	margin:2em;
+	font-size:70%;
+}
+
+#col-exemples-titre {
+	padding:0.5em;
+	background-color:hsl(48,100%,50%);
+	color:black;
+}
+
+</style>
 </head>
 
 <body>
-<p>Hello DIMI</p>
+
+<h1><span>G</span>raphi<span>D</span>imi</h1>
+<p>Codes cours Graphisme Dynamique. Université Paris 13. 2015-2016</p>
+<p><a href="https://github.com/graphidimi/graphidimi.github.io">Espace GitHub</a> pous télécharger ou cloner les fichiers.</p>
+
+<div id="col-seances">
+	<div id="col-seances-titre">Codes séances</div>
+    <div id="col-seances-content">
+    	<ul>
+        	<li><a href="seances/s01e01.html">s01e01.html</a></li>
+            <li><a href="seances/s01e02.html">s01e02.html</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="col-exemples">
+	<div id="col-exemples-titre">Codes exemples pour démarrer vos idées et questions</div>
+    <div id="col-exemples-content">
+    	<ul>
+        	<li><a href="exemples/01-pauline.html">Deux rectangles + pos. aléatoire + dat.gui</a></li>
+            <li><a href="exemples/02-pauline.html">Un rectangle + pos. aléatoire + déplaçable + dat.gui</a></li>
+        </ul>
+    </div>
+</div>
+
 </body>
 </html>
