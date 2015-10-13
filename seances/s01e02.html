@@ -1,0 +1,66 @@
+<html>
+
+<style>
+
+#rect {
+	width:100px; height:100px;
+	background-color:hsl(0, 0%, 50%);
+	margin:auto;
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	transition:background-color 1s, transform 1s;
+	padding:2em;
+}
+
+#rect:hover {
+	background-color:hsl(0, 100%, 50%);
+	transform:rotate(180deg);
+}
+
+</style>
+
+<script src="dat.gui.min.js"></script>
+
+<script>
+
+window.onload = function(){
+
+  var gui = new dat.GUI();
+	
+  var DatGui = function(){ 
+      this.posX = 0;
+	  this.posY = 0;
+	  this.couleur = 'rgb(255,0,0)'; // fonctionne aussi avec #FF0000
+	  this.texte = ' ';
+  };
+	
+  var monGui = new DatGui();
+	
+  var maPosX = gui.add(monGui, 'posX', -500, 700);
+  var maPosY = gui.add(monGui, 'posY', -500, 500);
+  var mesCouleurs = gui.addColor(monGui, 'couleur');
+  var monTexte = gui.add(monGui, 'texte');
+
+  maPosX.onChange(function(value){
+  	document.getElementById('rect').style.left = monGui.posX + 'px';
+  });
+  
+  maPosY.onChange(function(value){
+	document.getElementById('rect').style.top = monGui.posY + 'px';
+  });
+  
+  mesCouleurs.onChange(function(value){
+	document.getElementById('rect').style.backgroundColor = monGui.couleur;
+  });
+
+  monTexte.onChange(function(value){
+	document.getElementById('rect').innerHTML = monGui.texte;
+  });
+
+}
+
+</script>
+
+<div id="rect"></div>
+
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="jquery-ui-1.11.4/jquery-ui.min.css">
+<style>
+#rect01 {
+	width:70px; height:70px;
+	position:absolute;
+	background-color:hsl(0, 100%, 50%);
+	cursor:move;
+}
+
+</style>
+<script src="jquery-1.11.1.min.js"></script>
+<script src="jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="dat.gui.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+    $( "#rect01" ).draggable();
+});
+  
+</script>
+
+<script>
+
+window.onload = function(){
+
+	var gui = new dat.GUI();
+	  
+	var DatGui = function(){ 
+		this.posAlea = function(){
+			aleatoire();
+		};
+	};
+	  
+	var monGui = new DatGui();
+	  
+	gui.add(monGui, 'posAlea');
+    
+	function aleatoire() {
+		var posX = Math.random()*window.innerWidth;
+		var posY = Math.random()*window.innerHeight;
+		$( "#rect01" ).animate({ 
+			'left': posX+'px', 
+			'top': posY+'px' }, 
+		"slow" );
+	}
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="rect01" class="ui-widget-content"></div>
+
+</body>
+</html>

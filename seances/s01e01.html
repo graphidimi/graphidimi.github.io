@@ -1,0 +1,23 @@
+<html>
+
+<style>
+
+#rect {
+	width:100px; height:100px;
+	background-color:hsl(0, 0%, 50%);
+	margin:auto;
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	transition:background-color 1s, transform 1s;
+}
+
+#rect:hover {
+	background-color:hsl(0, 100%, 50%);
+	transform:rotate(180deg);
+}
+
+</style>
+
+<div id="rect"></div>
+
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style>
+#rect01, #rect02 {
+	width:70px; height:70px;
+	position:absolute;
+}
+
+#rect01 { background-color:hsl(0, 100%, 50%); }
+#rect02 { background-color:hsl(200, 100%, 50%); }
+
+</style>
+<script src="dat.gui.min.js"></script>
+
+<script>
+
+window.onload = function(){
+
+  var gui = new dat.GUI();
+	
+  var DatGui = function(){ 
+  	  this.posX = 0;
+      this.posAlea = function(){
+			randomiser();
+		};
+  };
+	
+  var monGui = new DatGui();
+  
+  var maPosX = gui.add(monGui, 'posX', 0, 10);
+  gui.add(monGui, 'posAlea');
+  
+  // Pour changer depuis le slider
+  maPosX.onChange(function(value){	
+  		document.getElementById('rect01').style.left = Math.random()*window.innerWidth + 'px';
+		document.getElementById('rect01').style.top = Math.random()*window.innerHeight + 'px';
+		document.getElementById('rect02').style.left = Math.random()*window.innerWidth + 'px';
+		document.getElementById('rect02').style.top = Math.random()*window.innerHeight + 'px';
+  });
+  
+  // Pour changer en appuyant sur le bouton posAlea
+  function randomiser(){
+		document.getElementById('rect01').style.left = Math.random()*window.innerWidth + 'px';
+		document.getElementById('rect01').style.top = Math.random()*window.innerHeight + 'px';
+		document.getElementById('rect02').style.left = Math.random()*window.innerWidth + 'px';
+		document.getElementById('rect02').style.top = Math.random()*window.innerHeight + 'px';
+  }
+
+}
+
+
+</script>
+</head>
+
+<body>
+
+<div id="rect01"></div>
+<div id="rect02"></div>
+
+</body>
+</html>
