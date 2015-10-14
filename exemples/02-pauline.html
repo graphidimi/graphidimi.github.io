@@ -32,15 +32,21 @@ window.onload = function(){
 	var gui = new dat.GUI();
 	  
 	var DatGui = function(){ 
+		this.angle = 0;
 		this.posAlea = function(){
 			aleatoire();
 		};
 	};
 	  
 	var monGui = new DatGui();
-	  
+	
+	var monAngle = gui.add(monGui, 'angle', 0, 360);
 	gui.add(monGui, 'posAlea');
     
+	monAngle.onChange(function(value){
+		document.getElementById('rect01').style.transform = 'rotate(' + monGui.angle +'deg)';
+	});
+	
 	function aleatoire() {
 		var posX = Math.random()*window.innerWidth;
 		var posY = Math.random()*window.innerHeight;
