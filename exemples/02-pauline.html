@@ -45,6 +45,7 @@ window.onload = function(){
     
 	monAngle.onChange(function(value){
 		document.getElementById('rect01').style.transform = 'rotate(' + monGui.angle +'deg)';
+		document.getElementById('rect01').style.backgroundColor = 'hsl(' + monGui.angle +',100%,50%)';
 	});
 	
 	function aleatoire() {
@@ -57,6 +58,7 @@ window.onload = function(){
 			 }, {
 			step: function(angleA) {
 		  			$(this).css('transform','rotate('+angleA+'deg)');
+					$(this).css('background-color','hsl('+angleA+',100%,50%)');
 				  }
 			},
 		"slow" );
