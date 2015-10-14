@@ -50,10 +50,18 @@ window.onload = function(){
 	function aleatoire() {
 		var posX = Math.random()*window.innerWidth;
 		var posY = Math.random()*window.innerHeight;
+		var angleA = Math.random()*360;
 		$( "#rect01" ).animate({ 
 			'left': posX+'px', 
-			'top': posY+'px' }, 
+			'top': posY+'px'
+			 }, {
+			step: function(angleA) {
+		  			$(this).css('transform','rotate('+angleA+'deg)');
+				  }
+			},
 		"slow" );
+		$
+		$( "#rect01" ).css('transform','rotate('+angleA+'deg)');  
 	}
 
 }
