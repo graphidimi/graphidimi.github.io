@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style>
+	#espace { 
+		width:800px; height:700px;
+		position:absolute;
+		margin:auto;
+		top:0; right:0; bottom:0; left:0;
+		border:1px solid gray;
+	}
+
+	span {
+		width:20px; height:20px;
+		background-color:red;
+		position:absolute;
+		margin:1em;
+		opacity:0.7;
+	}
+</style>
+<script>
+
+window.onload = function(){
+
+	var increm = 100;
+
+	for(var i = 0; i < Math.PI * 2; i+=0.1) {
+			
+		var x = Math.cos(i) * increm;
+		var y = Math.sin(i) * increm;
+			
+		document.getElementById('espace').innerHTML += '<span style="left:' + x + 'px; top:' + y + 'px; background-color:hsl(' + i*57.3 + ', 100%, 50%); transform:translate(400px, 350px);"></span>';
+	
+		
+	}
+
+}
+
+</script>
+</head>
+
+<body>
+
+	<div id="espace"></div>
+
+</body>
+</html>

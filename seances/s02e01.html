@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style>
+	#espace { 
+		width:7200px; height:100%; 
+		position:absolute;
+		top:0; left:0;
+	}
+
+	span {
+		width:20px; height:100%; float:left;
+	}
+</style>
+<script>
+
+window.onload = function(){
+
+	for(var i = 0; i < 360; i++){
+		document.getElementById('espace').innerHTML += '<span style="background-color:hsl(' + i + ', 100%, 50%);"> </span>';
+	}
+
+}
+
+</script>
+</head>
+
+<body>
+
+	<div id="espace"></div>
+
+</body>
+</html>

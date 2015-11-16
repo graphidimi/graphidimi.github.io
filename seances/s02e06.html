@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Radial Spans</title>
+<script src="jquery-1.11.1.min.js"></script>
+<script src="dat.gui.min.js"></script>
+<style>
+
+.bar { position:absolute; padding:0.5em; opacity:0.5; text-align:left;  }
+#space {
+	width:600px; height:600px;
+	margin:auto;
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	border:1px solid gray;
+}
+</style>
+<script>
+window.onload = function(){
+	
+	var gui = new dat.GUI();
+	
+	var DatGui = function(){
+		this.density = 3;
+		this.dimX = 10;
+		this.dimY = 1.5;
+		this.rayon = 200;
+		this.angle = 0.0174;
+		this.align = 0;
+		this.saturation = 100;
+		this.brightness = 50;
+		this.contour = true;
+		this.recommence = function(){
+			restart();
+		};
+	};
+	
+	var monGui = new DatGui();
+	
+	var mondensity = gui.add(monGui, 'density', 1, 10);
+	var dimensionX = gui.add(monGui, 'dimX', 1, 10);
+	var dimensionY = gui.add(monGui, 'dimY', 1, 3);
+	var monRayon = gui.add(monGui, 'rayon', 80, 250);
+	var monAngle = gui.add(monGui, 'angle', 0.001, 0.0174);
+	var monAlign = gui.add(monGui, 'align', -10, 10);
+	var maSat = gui.add(monGui, 'saturation', 0, 100);
+	var maBri = gui.add(monGui, 'brightness', 0, 50);
+	var monContour = gui.add(monGui, 'contour');
+	var cont = 1;
+	gui.add(monGui, 'recommence');		
+	
+	function draw(){
+		var centre = 300;
+
+		for(var i = 0; i < 360; i+=monGui.density){
+			document.getElementById('space').innerHTML += '<span class="bar" style="background-color:hsl('+i+','+monGui.saturation+'%,'+monGui.brightness+'%); transform:translate('+centre+'px,'+centre+'px) rotate('+i+'deg) scaleX('+Math.random() * monGui.dimX+') scaleY('+ Math.random() * monGui.dimY+') translateX('+monGui.align+'px); top:'+ Math.sin(i*monGui.angle) * monGui.rayon +'px; left:'+ Math.cos(i*monGui.angle) * monGui.rayon +'px;  border:'+cont+'px solid black;"></span>';
+		}
+
+	}
+	
+	mondensity.onChange(function(value){
+		document.getElementById('space').innerHTML = '';
+		monGui.density = monGui.density;
+		draw();
+	});
+	
+	dimensionX.onChange(function(value){
+		document.getElementById('space').innerHTML = '';
+		document.getElementById('space').style.transform = 'scaleX' + monGui.dimX;
+		draw();
+	});
+	
+	dimensionY.onChange(function(value){
+		document.getElementById('space').innerHTML = '';
+		document.getElementById('space').style.transform = 'scaleY' + monGui.dimY;
+		draw();
+	});
+
+	monRayon.onChange(function(value){
+		document.getElementById('space').innerHTML = '';
+		monGui.rayon = monGui.rayon;
+		draw();
+	});
+
+	monAngle.onChange(function(value){
+		document.getElementById('space').innerHTML = '';
+		monGui.angle = monGui.angle;
+		draw();
+	});
+
+	monAlign.onChange(function(value){
+		document.getElementById('space').innerHTML = '';
+		monGui.align = monGui.align;
+		draw();
+	});
+
+	maSat.onChange(function(value){
+		document.getElementById('space').innerHTML = '';
+		monGui.saturation = monGui.saturation;
+		draw();
+	});
+
+	maBri.onChange(function(value){
+		document.getElementById('space').innerHTML = '';
+		monGui.brightness = monGui.brightness;
+		draw();
+	});
+
+	monContour.onChange(function(value){
+		document.getElementById('space').innerHTML = '';
+		if (monGui.contour == true) {
+			cont = 1;
+		} else {
+			cont = 0;
+		}
+		draw();
+	});
+
+	function restart() {
+		var confirmation = confirm('Restart ?');
+		if (confirmation == true) {
+			document.location.reload(true);
+		} 
+	}
+
+	draw();
+
+}
+
+</script>
+</head>
+
+<body>
+<div id="space"></div>
+</body>
+</html>
