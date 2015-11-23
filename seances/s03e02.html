@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Graphisme dynamique - s03e02</title>
+<style>
+	body { margin:3em; }
+
+	.cadre {
+		float:left; position:relative;
+		border:10px gray solid;
+		margin:1em;
+	}
+</style>
+<script src="jquery-1.11.3.min.js"></script>
+
+<script>
+	$(document).ready(function(){	
+	
+		$('#chercher').click(function(){
+		
+			var url_flickr_p1 = "http://api.flickr.com/services/feeds/photos_public.gne?tags=";
+			var url_flickr_p2 = $('#monTag').val();
+			var url_flickr_p3 = "&tagmode=ANY&format=json&jsoncallback=?";
+			
+			var url_flickr = url_flickr_p1 + url_flickr_p2 + url_flickr_p3;
+		
+			
+			var couleurs = ['tomato', 'olive', 'darkred', '#FFCCDD'];
+			var hue = couleurs[Math.floor(Math.random()*4)];
+			
+			$.getJSON(url_flickr, function(data){
+				
+				var monTexte = '<div class="cadre" style="border-color:'+hue+'; background-color:'+hue+'; color:white;">'+url_flickr_p2+'</div>';
+				$('#espace').prepend(monTexte);
+			
+				$.each(data.items, function(i, photo){
+					
+					var maPhoto = '<div class="cadre" style="border-color:'+hue+'">';
+					maPhoto += '<a href=" ' + photo.link + ' ">';
+					maPhoto += '<img src=" ' + photo.media.m.replace('_m', '_s') + ' "></a></div>';
+				
+					$('#espace').prepend(maPhoto);
+				
+				});
+			
+			});
+		
+		});
+				
+	});
+</script>
+
+</head>
+
+<body>
+	<input type="text" width="40" id="monTag"> <button id="chercher">Chercher des photos par tag</button>
+	<div id="espace"></div>
+</body>
+</html>

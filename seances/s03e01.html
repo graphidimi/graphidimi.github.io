@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Graphisme dynamique - s03e01</title>
+<script src="jquery-1.11.3.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		
+		var url_flickr = "http://api.flickr.com/services/feeds/photos_public.gne?tags=kittler&tagmode=ANY&format=json&jsoncallback=?";
+		
+		$.getJSON(url_flickr, function(data){
+		
+			$.each(data.items, function(i, photo){
+			
+				var maPhoto = '<span>';
+				maPhoto += '<a href=" ' + photo.link + ' ">';
+				maPhoto += '<img src=" ' + photo.media.m.replace('_m', '_b') + ' "></a></span> <br>';
+			
+				$('#espace').append(maPhoto);
+			
+			});
+		
+		});
+				
+	});
+</script>
+
+</head>
+
+<body>
+	<div id="espace">Hello world</div>
+</body>
+</html>
