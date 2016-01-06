@@ -12,8 +12,8 @@
 h1, p { margin:1em; font-size:70%; }
 
 #col-seances {
-	width:400px;
-	border-right:1px solid hsl(300,33%,30%);
+	width:460px;
+	border-right:1px solid darkred;
 	float:left;
 	margin:2em;
 	font-size:70%;
@@ -21,7 +21,7 @@ h1, p { margin:1em; font-size:70%; }
 
 #col-seances-titre {
 	padding:0.5em;
-	background-color:hsl(300,33%,30%);
+	background-color:darkred;
 	color:white;
 }
 
@@ -31,8 +31,8 @@ h1, p { margin:1em; font-size:70%; }
 }
 
 #col-exemples {
-	width:400px;
-	border-right:1px solid hsl(48,100%,50%);
+	width:460px;
+	border-right:1px solid #333;
 	float:left;
 	margin:2em;
 	font-size:70%;
@@ -40,8 +40,8 @@ h1, p { margin:1em; font-size:70%; }
 
 #col-exemples-titre {
 	padding:0.5em;
-	background-color:hsl(48,100%,50%);
-	color:black;
+	background-color:#333;
+	color:white;
 }
 
 </style>
@@ -57,10 +57,12 @@ h1, p { margin:1em; font-size:70%; }
 	<div id="col-seances-titre">Codes séances</div>
     <div id="col-seances-content">
     	<ul>
+        	<h5>dat.gui + styles des éléments HTML</h5>
         	<li><a href="seances/s01e01.html">s01e01.html</a> - DIV rotation</li>
             <li><a href="seances/s01e02.html">s01e02.html</a> - DIV contrôlé par dat.gui</li>
             <li><a href="seances/s01e03.html">s01e03.html</a> - DIV plusieurs contrôles dat.gui</li>
             <hr>
+            <h5>Position éléments HTML</h5>
             <li><a href="seances/s02e01.html">s02e01.html</a> - SPAN de couleur en longeur</li>
             <li><a href="seances/s02e02.html">s02e02.html</a> - Une grille de SPAN de couleur</li>
             <li><a href="seances/s02e03.html">s02e03.html</a> - SPAN radial version 1</li>
@@ -68,18 +70,52 @@ h1, p { margin:1em; font-size:70%; }
             <li><a href="seances/s02e05.html">s02e05.html</a> - SPAN radial version 1 avec dat.gui</li>
             <li><a href="seances/s02e06.html">s02e06.html</a> - SPAN radial version 2 avec dat.gui</li>
             <hr>
+            <h5>JSON + APIs</h5>
             <li><a href="seances/s03e01.html">s03e01.html</a> - Galerie JSON Flickr</li>
             <li><a href="seances/s03e02.html">s03e02.html</a> - Galerie JSON Flickr avec style</li>
+            <hr>
+            <h5>Canvas</h5>
+            <li><a href="seances/s04-canvas/01-dessin/00-figures.html">00-figures.html</a> - Figures simples</li>
+            <li><a href="seances/s04-canvas/01-dessin/01-canvasBoucle.html">01-canvasBoucle.html</a> - Figures avec boucle for</li>
+            <li><a href="seances/s04-canvas/01-dessin/02-sinusGraph.html">02-sinusGraph.html</a> - Graphique sinus</li>
+            <li><a href="seances/s04-canvas/01-dessin/03-lignesBezierPleinEcran.html">03-lignesBezierPleinEcran.html</a> - 50 lignes bézier aléatoires</li>
+            <li><a href="seances/s04-canvas/02-animation simple/01-balle.html">01-balle.html</a> - Balle rebondissante</li>
+            <li><a href="seances/s04-canvas/02-animation simple/02-sinusAnimation.html">02-sinusAnimation.html</a> - Animation sinus 1D</li>
+            <li><a href="seances/s04-canvas/02-animation simple/03-sinusRotation.html">03-sinusRotation.html</a> - Animation sinus 2D</li>
+            <li><a href="seances/s04-canvas/02-animation simple/04-trigoRotation.html">04-trigoRotation.html</a> - Animation avec boucle for</li>
+            <li><a href="seances/s04-canvas/03-interactive simple/01-texte.html">01-texte.html</a> - Texte et effets simples</li>
+            <li><a href="seances/s04-canvas/03-interactive simple/02-cercles.html">02-cercles.html</a> - Ronds aléatoires</li>
+            <li><a href="seances/s04-canvas/03-interactive simple/03-texte-et-image.html">03-texte-et-image.html</a> - Texte et image</li>
+            <li><a href="seances/s04-canvas/03-interactive simple/04-texte-et-image-url.html">04-texte-et-image-url.html</a> - Texte et image URL</li>
+            <li><a href="seances/s04-canvas/04-json/01-amis.html">01-amis.html</a> - Mes amis Facebook</li>
+            <li><a href="seances/s04-canvas/04-json/02-amisAvecPhoto.html">02-amisAvecPhoto.html</a> - Mes amis avec photo</li>
+            <li><a href="seances/s04-canvas/04-json/03-ami-anim.html">03-ami-anim.html</a> - Mes amis organisés</li>
+            <li><a href="seances/s04-canvas/04-json/04-ami-canvas.html">04-ami-canvas.html</a> - Mes amis autour d'un cercle</li>
+            <li><a href="seances/s04-canvas/04-json/05-flickr-canvas.html">05-flickr-canvas.html</a> - Flickr sur canvas</li>
+            <li><a href="seances/s04-canvas/05-image/01-image-drawImage.html">01-image-drawImage.html</a> - Image simple sur canvas</li>
+            <li><a href="seances/s04-canvas/05-image/02-images-2canvas.html">02-images-2canvas.html</a> - Une image dans 2 canvas</li>
+            <li><a href="seances/s04-canvas/05-image/03-images-multiple.html">03-images-multiple.html</a> - Une image plusieurs fois dans un canvas</li>
+            <li><a href="seances/s04-canvas/05-image/04-images-tilesAnimArray.html">04-images-tilesAnimArray.html</a> - Une image découpée en array animé</li>
+            <li><a href="seances/s04-canvas/06-animation-moyen/01-ballesArray.html">01-ballesArray.html</a> - Plusieurs balles dans un array</li>
+            <li><a href="seances/s04-canvas/06-animation-moyen/02-ballesCollision.html">02-ballesCollision.html</a> - Plusieurs balles en collision</li>
+            <li><a href="seances/s04-canvas/07-interactive-moyen/01-paint.html">01-paint.html</a> - Un Paint simple</li>
+            <li><a href="seances/s04-canvas/07-interactive-moyen/02-cerclesOOP.html">02-cerclesOOP.html</a> - Ronds à sélectionner et déplacer</li>
+            <li><a href="seances/s04-canvas/08-audio/01_audio_dynamique.html">01_audio_dynamique.html</a> - Information d'un fichier audio</li>
+            <li><a href="seances/s04-canvas/08-audio/02_audio_couleur-fond.html">02_audio_couleur-fond.html</a> - Couleur du canvas par un fichier audio</li>
+            <li><a href="seances/s04-canvas/08-audio/03_telephone.html">03_telephone.html</a> - Un mini-téléphone</li>
+            <li><a href="seances/s04-canvas/09-video/02-video-rotate.html">02-video-rotate.html</a> - Rotation d'une vidéo dans un canvas</li>
+            <li><a href="seances/s04-canvas/09-video/03-video-destruct.html">03-video-destruct.html</a> - Une seule vidéo affichée plusieurs fois</li>
         </ul>
     </div>
 </div>
 
 <div id="col-exemples">
-	<div id="col-exemples-titre">Codes exemples pour démarrer vos idées et questions</div>
+	<div id="col-exemples-titre">Codes exemples pour répondre à vos questions</div>
     <div id="col-exemples-content">
     	<ul>
         	<li><a href="exemples/e01.html">Deux rectangles + pos. aléatoire + dat.gui</a></li>
             <li><a href="exemples/e02.html">Un rectangle + pos. aléatoire + déplaçable + dat.gui</a></li>
+            <li><a href="exemples/glyph-inspector-flickr.html">Images positionnées selon des lettres (opentype.js + flickr api)</a></li>
         </ul>
     </div>
 </div>
