@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style>
+html, body { margin:0; padding:0; }
+canvas { display:block; }
+</style>
+<script src="p5.min.js"></script>
+<script>
+var r = 300.0;
+var x, y, z;
+
+function setup(){
+  createCanvas(window.innerWidth,window.innerHeight,WEBGL);
+}
+
+function draw() {
+  background(200);
+  
+  //translate(window.innerWidth/2,window.innerHeight/2, 0);
+  rotateY(frameCount * 0.01);
+  rotateZ(frameCount * 0.01);
+  rotateX(frameCount * 0.01);	  
+
+  
+  for(var i = 0; i < 360; i+=10) {
+	push();
+    for(var j = 0; j < 360; j+=10){
+      
+	  
+	  
+	  //translate(cos(frameCount * 0.001 + i) * cos(frameCount * 0.001 + j) * 60,cos(frameCount * 0.001 + i) * sin(frameCount * 0.001 + j) * 60,sin(frameCount * 0.001 + i) * 60);
+	  //translate(cos(i) * cos(j) * r,cos(i) * sin(j) * r, sin(i) * 10);
+	  
+	  
+	  x = r * cos(i) * cos(j);
+      y = r * cos(i) * sin(j);
+      z = r * sin(i);
+	   
+	  push();
+	  translate(x,y,z);
+      sphere(5, 5, 5); 
+	  pop();
+	  
+      
+    }
+	pop();
+  }
+   
+}
+
+</script>
+</head>
+
+<body>
+</body>
+</html>
