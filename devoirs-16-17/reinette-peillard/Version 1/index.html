@@ -1,0 +1,216 @@
+<html>
+	<head> 
+		<title>TEST</title>
+		<meta charset="UTF-8">
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ 
+		<script type="text/javascript">
+		    $(document).ready(function(){
+
+				$(".prev").click(function(){
+					$(".slideshow ul").animate({marginLeft:+1174},800,function(){
+		            	$(this).css({marginLeft:0}).find("li:first").before($(this).find("li:last"));
+		         	})
+				});
+
+				$(".next").click(function(){
+					$(".slideshow ul").animate({marginLeft:-1174},800,function(){
+		            	$(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
+		         	})
+				});
+
+
+				$(".prev-bis").click(function(){
+					$(".slideshow-bis ul").animate({marginLeft:+1174},800,function(){
+		            	$(this).css({marginLeft:0}).find("li:first").before($(this).find("li:last"));
+					})
+				});
+
+				$(".next-bis").click(function(){
+					$(".slideshow-bis ul").animate({marginLeft:-1174},800,function(){
+		            	$(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
+					})
+				});
+
+
+				$(".prev-ter").click(function(){
+					$(".slideshow-ter ul").animate({marginLeft:+1174},800,function(){
+		            	$(this).css({marginLeft:0}).find("li:first").before($(this).find("li:last"));
+		         	})
+				});
+
+				$(".next-ter").click(function(){
+					$(".slideshow-ter ul").animate({marginLeft:-1174},800,function(){
+		            	$(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
+		         	})
+				});
+
+			});
+		</script>
+
+
+		<style>
+			/* slideshow */
+			.slideshow {
+			   width: 1174px;
+			   height: 245px;
+			   overflow: hidden;
+			   margin-left:auto;
+			   margin-right:auto;
+			}
+
+			.slideshow ul {
+			    /* 3 images donc 3 x 100% */
+			   width: 300%;
+			   height: 200px;
+			   padding: 0; margin: 0;
+			   list-style: none;
+			}
+			
+			.slideshow li {
+			   float: left;
+			}
+
+			/* slideshow-bis */
+			.slideshow-bis {
+			   width: 1174px;
+			   height: 245px;
+			   overflow: hidden;
+			   margin-left:auto;
+			   margin-right:auto;
+			}
+
+			.slideshow-bis ul {
+			    /* 3 images donc 3 x 100% */
+			   width: 300%;
+			   height: 200px;
+			   padding:0; margin:0;
+			   list-style: none;
+			}
+			
+			.slideshow-bis li {
+			   float: left;
+			}
+
+			/* slideshow-ter */
+			.slideshow-ter {
+			   width: 1174px;
+			   height: 245px;
+			   overflow: hidden;
+			   margin-left:auto;
+			   margin-right:auto;
+			}
+
+			.slideshow-ter ul {
+			    /* 3 images donc 3 x 100% */
+			   width: 300%;
+			   height: 200px;
+			   padding:0; margin:0;
+			   list-style: none;
+			}
+			
+			.slideshow-ter li {
+			   float: left;
+			}
+
+			/* Next & previous buttons */
+			.prev, .next {
+			  cursor: pointer;
+			  position: absolute;
+			  top: 18%;
+			  width: auto;
+			  margin-top: -22px;
+			  padding: 16px;
+			  color: black;
+			  font-weight: bold;
+			  font-size: 32px;
+			  transition: 0.6s ease;
+			  border-radius: 0 3px 3px 0;
+			}
+
+			.prev-bis, .next-bis {
+			  cursor: pointer;
+			  position: absolute;
+			  top: 50%;
+			  width: auto;
+			  margin-top: -22px;
+			  padding: 16px;
+			  color: black;
+			  font-weight: bold;
+			  font-size: 32px;
+			  transition: 0.6s ease;
+			  border-radius: 0 3px 3px 0;
+			}
+
+			.prev-ter, .next-ter {
+			  cursor: pointer;
+			  position: absolute;
+			  top: 85%;
+			  width: auto;
+			  margin-top: -22px;
+			  padding: 16px;
+			  color: black;
+			  font-weight: bold;
+			  font-size: 32px;
+			  transition: 0.6s ease;
+			  border-radius: 0 3px 3px 0;
+			}
+
+
+			/* Position the "prev button" to the left */
+			.prev, .prev-bis, .prev-ter {
+			  left: 92;
+			  border-radius: 3px 0 0 3px;
+			}
+
+			/* Position the "next button" to the right */
+			.next, .next-bis, .next-ter {
+			  right: 92;
+			  border-radius: 0 3px 3px 0;
+			}
+
+		</style>
+	</head>
+
+
+	<body>
+		<!-- slideshow -->
+		<div class="slideshow"> 
+			<ul>
+				<li><img src="HautAfro.jpg" alt="" width="1174" height="245" /></li>
+				<li><img src="HautBlanche.jpg" alt="" width="1174" height="245" /></li>
+				<li><img src="HautSinge.jpg" alt="" width="1174" height="245" /></li>
+				<!-- <li><img src="HautAfro.jpg" alt="" width="1174" height="245" /></li> -->
+			</ul>
+			<a class="prev">&#10094;</a>
+			<a class="next">&#10095;</a>
+		</div>
+
+		<!-- slideshow-bis -->
+		<div class="slideshow-bis">
+			<ul>
+				<li><img src="MilieuAfro.jpg" alt="" width="1174" height="245" /></li>
+				<li><img src="MilieuBlanche.jpg" alt="" width="1174" height="245" /></li>
+				<li><img src="MilieuSinge.jpg" alt="" width="1174" height="245" /></li>
+				<!-- <li><img src="MilieuAfro.jpg" alt="" width="1174" height="245" /></li> -->
+			</ul>
+			<a class="prev-bis">&#10094;</a>
+			<a class="next-bis">&#10095;</a>
+		</div>
+
+		<!-- slideshow-ter -->
+		<div class="slideshow-ter">
+			<ul>
+				<li><img src="BasAfro.jpg" alt="" width="1174" height="245" /></li>
+				<li><img src="BasBlanche.jpg" alt="" width="1174" height="245" /></li>
+				<li><img src="BasSinge.jpg" alt="" width="1174" height="245" /></li>
+				<!-- <li><img src="BasAfro.jpg" alt="" width="1174" height="245" /></li> -->
+			</ul>
+			<a class="prev-ter">&#10094;</a>
+			<a class="next-ter">&#10095;</a>
+		</div>
+
+		
+	</body>
+</html>

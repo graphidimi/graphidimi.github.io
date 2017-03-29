@@ -1,0 +1,44 @@
+html, body {
+  background-color: #D8D8D8;
+  margin: 0;
+}
+
+body {
+	background-image: url(neige.png);
+	background-size: 100%, auto;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+#MyPathI {
+  float: left;
+}
+
+path {
+  margin: auto;
+  margin-bottom: 0;
+}
+
+#lettreD { display: block; width: 500px; height: 150px; margin: auto; margin-top: 15%;}
+
+#balle1{
+  -webkit-animation: rotation 5s infinite; /* Safari 4+ */
+  -moz-animation:    rotation 5s infinite; /* Fx 5+ */
+  -o-animation:      rotation 5s infinite; /* Opera 12+ */
+  animation:         rotation 5s infinite; /* IE 10+, Fx 29+ */
+}
+
+.tuna {
+  animation: walk-cycle 1s steps(12) infinite;
+  background: url(tuna_sprite.png) 0 0 no-repeat; 
+  height: 200px;
+  width: 400px;
+  margin: 15% auto 0;
+}
+
+@keyframes walk-cycle {  
+  0% {background-position: 0 0; } 
+  100% {background-position: 0 -2391px; } 
+}
+
+p {text-align: center;}

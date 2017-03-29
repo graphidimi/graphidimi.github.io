@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<title>DIMI</title>
+    <meta name="description" content="Le Destin Incertain d'un Majestueux Inconu">
+    <meta name="author" content="Michele Balboa, Manon Denys, Celia Benouari, Myriame Hammoumi">
+
+	<link rel="stylesheet" type="text/css" href="css/aos.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src="js/aos.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$('#btn_clairs').click(function(){
+				$('#section-clairs').show();
+				$('#section-clairs').css('overflow','scroll');
+			});
+		});
+	</script>
+		
+	<title>DIMI</title>
+
+</head>
+
+<body>
+
+		<section class="section section--code">
+			<div class="container">
+				<div id="container8" class="code code--wider code--left cases" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+					<div id="text-box-container8">
+						<p>Le spematozoïde aux yeux clairs contunue alors sont chemin jusqu'à l'ovule...</p>
+					</div>
+				</div>
+				<div id="container9" class="code code--small code--right cases" data-aos="fade-left">
+					<div id="text-box-container9" class="box-text">
+						<p>Arrivé devant l'ovule, le petit prince est complètement ébloui par sa bouté. Pourtant celle-ci était dubitative...</p>
+					</div>
+				</div>
+				<div id="container10" class="code code--small code--right cases" data-aos="fade-right">
+				
+
+					<div class="speech-bubble" id="bubble-container10">
+  					<div class="arrow botom right"></div>
+					Je ne suis pas sûre de collaborer avec toi, les êtres humains aux yeux clairs sont connus pour se trouver beaux... Et je n'aime pas cela !
+					</div>
+
+			<!--***BULLE INFOS %-->
+				<div id="bubble-container10">
+					<div class="more" id="fixed">
+						<p>+</p>
+					</div>
+					<div class="following">
+						<div class="more" id="moving">
+							<p>+</p>
+						</div>
+						<div class="pourcent-bubble" id="infopourcent1">
+							<p>83% <br> des gens <br> ayant les <br> yeux clairs <br> se trouvent <br> beaux</p>
+							<div class= "arrow left"></div>
+						</div>
+					</div>
+				</div>
+			<!--***FIN BULLE INFOS %-->
+
+
+				</div>
+				<div id="container11" class="code code--small code--right cases" data-aos="fade-up">
+					<div id="text-box-container11" class="box-text">
+						<p>Bref il la regarda, elle lui regarda, il la regarda...</p>
+					</div>
+					<div class="speech-bubble" id="bubble-container11">
+  					<div class="arrow botom right"></div>
+					Euh, je crois que ça va pas être possible !
+					</div>
+				</div>
+
+				<div id="container12" class="code code--small code--right cases" data-aos="fade-left">
+					<div id="text-box-container12" class="box-text">
+						<p>Vexé, le spermatozoide aux yeux clairs se mit à bouder... Puis à réflexir.</p>
+					</div>
+				</div>
+			<div>
+				<div id="container13" class="code code--small code--left cases" data-aos="flip-up">
+
+					<div class="question">
+						<h2>Veux-tu baratiner l'ovule pour pouvoir atteindre ton objectif et triompher ?</h2>
+					</div>
+					
+					<div id="text-box-container13" onclick="location='non-clairs.html'">
+						<h4>NON</h4>
+					</div>
+
+				</div>
+
+				<div id="container14" class="code code--small code--right cases" data-aos="flip-down" onclick="location='oui-clairs.html'"> 
+						<div id="text-box-container14" >
+							<h3>OUI</h3>
+						</div>
+				</div>
+			</div>
+
+			
+
+		</section>
+
+<!--INFO BULLE%-->
+<script>
+$('#container10').mousemove(function(e) {
+  $('#fixed').hide();
+  $('.following').show();
+  $('.following').css({
+    transform: "translate(" + e.pageX + "px," + e.pageY + "px)"
+  });
+
+
+  $('.following').show().css({
+    transform: "translate(" + e.pageX + "px," + e.pageY + "px)"
+  });
+});
+$('#container10').mouseout(function(e) {
+
+  $('#fixed').show();
+  $('.following').hide();
+
+});
+</script>
+<!--FIN INFO BULLE%-->
+
+
+
+
+
+		<script>
+			AOS.init({
+				easing: 'ease-out-back',
+				duration: 1000
+			});
+		</script>
+
+		<script>
+			hljs.initHighlightingOnLoad();
+
+			$('.hero__scroll').on('click', function(e) {
+				$('html, body').animate({
+					scrollTop: $(window).height()
+				}, 1200);
+			});
+		</script>
+
+</body>
+</html>

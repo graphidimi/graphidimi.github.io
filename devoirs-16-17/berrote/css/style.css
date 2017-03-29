@@ -1,0 +1,98 @@
+.bloc{
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	background-color: black;
+	transition: all 0.3s;
+}
+
+#un{
+	top: 0;
+	left: 0;
+}
+
+#deux{
+	top: 0;
+	right: 0;
+}
+
+#trois{
+	bottom: 0;
+	left: 0;
+}
+
+#quatre{
+	bottom: 0;
+	right: 0;
+}
+
+#centre{
+	display: block;
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	animation-name: rotate;
+	animation-duration: 0;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+p{
+	font-family: helvetica, sans-serif;
+	text-align: center;
+	color: white;
+	font-size: 18px;
+}
+
+.vitesse{
+	bottom: 5%;
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+#lent{
+	right: 17%;
+
+}
+
+#normal{
+	right: 12%;
+}
+
+#rapide{
+	right: 7%;
+}
+
+#hardcore{
+	right:2%;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg) translateX(-50%) translateY(-50%);
+	}
+	25% {
+		transform: rotate(-8deg) translateX(-50%) translateY(-50%);
+	}
+	50% {
+		transform: rotate(0deg) translateX(-50%) translateY(-50%);
+	}
+	75% {
+		transform: rotate(8deg) translateX(-50%) translateY(-50%);
+	}
+	100% {
+		transform: rotate(0deg) translateX(-50%) translateY(-50%);
+	}
+}

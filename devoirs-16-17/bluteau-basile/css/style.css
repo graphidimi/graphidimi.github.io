@@ -1,0 +1,26 @@
+body {
+	margin:0;
+	padding:0;
+	background: url(../images/fond.png) no-repeat center fixed; 
+	-webkit-background-size: cover; /* pour anciens Chrome et Safari */
+	background-size: cover; /* version standardisée */
+}
+
+#volcan {
+	width: 40%;
+	position: absolute;
+	left: 25%;
+	bottom : 19% ;
+	cursor:pointer;
+	z-index: 2;
+}
+
+.lapins{
+	width: 4%;
+	position: absolute;
+	left: 43%;
+	bottom: 26% ;
+	z-index:1;
+	cursor:pointer;
+}
+

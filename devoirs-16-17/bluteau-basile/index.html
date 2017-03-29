@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- 
+	Drag & drop de lapins dans leur terrier → js
+!-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Le volcan à lapins</title>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<link href="css/style.css" rel="stylesheet" media="all" type="text/css"> 
+		<link rel="stylesheet" type="text/css" href="css/csshake.min.css">
+	</head>
+
+	<body onload="init()">
+	<div id="background">
+		<img src="images/volcan.png" id="volcan" class="shake-slow shake-constant">
+		<div id="lapinous">
+			<img src="images/lapinou1.png" id="lapin-1" class="lapins draggable">
+			<img src="images/lapinou2.png" id="lapin-2" class="lapins draggable">
+			<img src="images/lapinou3.png" id="lapin-3" class="lapins draggable">
+			<img src="images/lapinou4.png" id="lapin-4" class="lapins draggable">
+		</div>
+	</div>
+	</body>
+</html>

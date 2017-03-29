@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Urbalight</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #454545;
+				color: #fff;
+				margin: 0;
+				overflow: hidden;
+			}
+
+			#home_page{
+				padding-top: 20%;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: black;
+				z-index: 20;
+				text-align: center;
+			}
+
+			#start_button{
+				opacity: 0;
+				width: 150px;
+				height: 50px;
+				border: 2px solid white;
+				background: black;
+				cursor: pointer;
+				color: white;
+				font-weight: bold;
+				font-size: 1em;
+				transition-duration: 0.2s;
+			}
+
+			#start_button:hover{
+				transform: scale(1.1);
+			}
+
+			
+
+
+			#picture{
+				opacity: 0;
+				display: none;
+				position: absolute;
+			    width: 80%;
+			    margin: auto;
+			    left: 0;
+			    right: 0;
+			    top: 5%;
+			    z-index: 10;
+			    border: 11px solid white;
+			    transform: rotate(-2deg);
+			    transition-duration: 0.3s;
+			}
+
+			#picture:hover{
+				transform: scale(1.05) rotate(-1deg);
+			}
+
+			#ambiance_1_button, #ambiance_2_button{
+				position: absolute;
+				display: none;
+				width: 150px;
+				height: 50px;
+				border: 2px solid white;
+				background: black;
+				opacity: 0.5;
+				cursor: pointer;
+				color: white;
+				font-weight: bold;
+				font-size: 1em;
+				z-index: 3;
+			}
+
+			#ambiance_2_button{
+				left: 160px;
+
+			}
+
+			
+			#day_button:hover{
+				opacity: 0.9;
+			}
+
+			.selected_button{
+				opacity: 0.9;
+			}
+
+			#picture_indication{
+				display: none;
+				color: white;
+				width: 500px;
+				text-align: center;
+				position: absolute;
+				margin: auto;
+				left: 0;
+				right: 0;
+				bottom: 20px;
+			}
+
+			#return_button{
+				display: none;
+				position: absolute;
+				width: 30px;
+				height: 30px;
+				left: 10px;
+				top: 10px;
+				cursor: pointer;
+				transition-duration: 0.2s;
+			}
+
+			#return_button:hover{
+				transform: translate3d(-5px, 0, 0);
+			}
+
+			#download_button{
+				display: none;
+				position: absolute;
+				width: 40px;
+				height: 40px;
+				right: 10px;
+				top: 10px;
+				cursor: pointer;
+				transition-duration: 0.2s;
+				background-image: url(img/download_button.png);
+
+			}
+
+			#download_button:hover{
+				transform: scale(1.1);
+			}
+
+			#loader_container{
+				margin: 50px auto 0 auto;
+				width: 200px;
+				height: 6px;
+				background: black;
+				border: 2px solid white;
+				border-radius: 20px;
+			}
+
+			#loader_progress{
+				width: 10px;
+				height: 6px;
+				background: white;
+				border-radius: 20px;
+
+			}
+
+
+
+
+		</style>
+	</head>
+
+	<body>
+		<div id="home_page">
+
+			<h1 id="main_title">Urbalight</h1>
+			<p id="main_description">Prenez une photo du décor selon l'ambiance de votre choix.</p>
+			<div id="loader_container">
+				<div id="loader_progress"></div>
+			</div>
+			<button id='start_button'>COMMENCER</button>
+			
+		</div>
+
+		<button id="ambiance_1_button">NUIT</button>
+		<button id="ambiance_2_button">JOUR</button>
+
+		<p id="picture_indication">Appuyez sur 'P' pour prendre une photo.</p>
+
+		<img id="picture">
+		<img id="return_button" src="img/return_button.png">
+		<a id="download_button" download="Urbalight Screenshot - Nicolas Barroso.png"></a>
+		
+		
+
+		<script src="js/three.min.js"></script>
+		
+		<script src="js/jquery-3.1.1.min.js"></script>
+
+		<!--<script src="js/Detector.js"></script> 
+		<script src="js/libs/stats.min.js"></script> -->
+
+		<script>
+
+			var container, stats;
+
+			var camera, scene, renderer;
+
+			var rendering;
+
+			var picture;
+
+			var mouseX = 0, mouseY = 0;
+
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
+
+
+			$("#loader_progress").animate({width: "200px"}, 2000, function() {
+
+					$("#loader_container, #loader_progress").animate({opacity: 0}, 500);
+
+					$("#start_button").animate({opacity: 1}, 500, function() {
+
+							$(this).click(function(event) {
+
+								$("#home_page").animate({opacity: 0},500, function() {
+
+									$("#home_page").hide();
+									$("#ambiance_1_button, #ambiance_2_button, #picture_indication").show();
+								});
+							});
+					});
+			});
+
+					
+			
+			setTimeout(function(){ 
+				init();
+				animate();
+			 }, 1000);
+
+
+			
+
+			
+
+
+			function init() {
+
+				//var context = canvas.getContext("experimental-webgl", {preserveDrawingBuffer: true});
+
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
+				camera.position.z = -500;
+
+
+				// scene
+
+				scene = new THREE.Scene();
+
+
+				//scene.background = new THREE.Color( 0xffffff );
+				//scene.fog = new THREE.Fog( 0x000000, 0, 900 );
+				var ambient = new THREE.AmbientLight( 0x404040 );
+				scene.add( ambient );
+
+				
+
+
+				/*var light = new THREE.AmbientLight( 0x404040 ); // soft white light
+				scene.add( light );*/
+
+				var ambiance_1_lights = [];
+				var ambiance_2_lights = [];
+
+				// RED LIGHT
+				var light1 = new THREE.PointLight( 0xffb351, 1.5, 800);
+				light1.position.set( 200, 180,0 );
+				helper1 = new THREE.PointLightHelper(light1, 4);
+				light1.castShadow = true;
+				light1.shadowDarkness = 0.5;
+				//light.shadowCameraVisible = true;
+				ambiance_1_lights.push(light1);
+				scene.add( light1 );
+				//scene.add( helper );
+
+
+
+				// GREEN LIGHT
+				var light2 = new THREE.PointLight( 0x5aff00, 1, 500);
+				light2.position.set( -50, 150,70 );
+				//helper2 = new THREE.PointLightHelper(light2, 4);
+				light2.castShadow = true;
+				light2.shadowDarkness = 0.5;
+				//light.shadowCameraVisible = true;
+				ambiance_1_lights.push(light2);
+				scene.add( light2 );
+				//scene.add( helper2 );
+
+				var light3 = new THREE.PointLight( 0x5aff00, 1, 500);
+				light3.position.set( -130, 160,70 );
+				helper3 = new THREE.PointLightHelper(light3, 4);
+				light3.castShadow = true;
+				light3.shadowDarkness = 0.5;
+				ambiance_1_lights.push(light3);
+				//light.shadowCameraVisible = true;
+				scene.add( light3 );
+				//scene.add( helper3 );
+
+
+				//PINK LIGHT
+				var redlight1 = new THREE.PointLight( 0xff00a2, 1, 500);
+				redlight1.position.set( -80, 195,90 );
+				redhelper1 = new THREE.PointLightHelper(redlight1, 4);
+				redlight1.castShadow = true;
+				redlight1.shadowDarkness = 0.5;
+				//light.shadowCameraVisible = true;
+				ambiance_1_lights.push(redlight1);
+				scene.add( redlight1 );
+				//scene.add( redhelper1 );
+
+				var redlight2 = new THREE.PointLight( 0xff00a2, 1, 500);
+				redlight2.position.set( -80, 110,90 );
+				redhelper2 = new THREE.PointLightHelper(redlight2, 4);
+				redlight2.castShadow = true;
+				redlight2.shadowDarkness = 0.5;
+				//light.shadowCameraVisible = true;
+				ambiance_1_lights.push(redlight2);
+				scene.add( redlight2 );
+				//scene.add( redhelper2 );
+
+				var redlight3 = new THREE.PointLight( 0xff00a2, 1, 500);
+				redlight3.position.set( -180, 153,90 );
+				redhelper3 = new THREE.PointLightHelper(redlight3, 4);
+				redlight3.castShadow = true;
+				redlight3.shadowDarkness = 0.5;
+				ambiance_1_lights.push(redlight3);
+				//light.shadowCameraVisible = true;
+				scene.add( redlight3 );
+				//scene.add( redhelper3 );
+
+				var redlight4 = new THREE.PointLight( 0xff00a2, 1, 500);
+				redlight4.position.set( 25, 153,90 );
+				redhelper4 = new THREE.PointLightHelper(redlight4, 4);
+				redlight4.castShadow = true;
+				redlight4.shadowDarkness = 0.5;
+				//light.shadowCameraVisible = true;
+				ambiance_1_lights.push(redlight4);
+				scene.add( redlight4 );
+				//scene.add( redhelper4 );
+				//light2.intensity = 0;
+				//light3.intensity = 0;
+
+
+
+				hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
+				hemiLight.color.setHSL( 0.6, 1, 0.6 );
+				hemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
+				hemiLight.position.set( 0, 500, 0 );
+				ambiance_2_lights.push(hemiLight);
+				scene.add( hemiLight );
+
+				dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
+				dirLight.color.setHSL( 0.1, 1, 0.95 );
+				dirLight.position.set( -1, 1000, 100 );
+				dirLight.position.multiplyScalar(50);
+				ambiance_2_lights.push(dirLight);
+				scene.add( dirLight );
+
+				dirLight.castShadow = true;
+
+				dirLight.shadow.mapSize.width = 2048;
+				dirLight.shadow.mapSize.height = 2048;
+
+				var d = 50;
+
+				dirLight.shadow.camera.left = -d;
+				dirLight.shadow.camera.right = d;
+				dirLight.shadow.camera.top = d;
+				dirLight.shadow.camera.bottom = -d;
+
+				dirLight.shadow.camera.far = 3500;
+				dirLight.shadow.bias = -0.0001;
+
+				
+
+
+
+				// BENCH
+				var objectLoader1 = new THREE.ObjectLoader();
+				objectLoader1.load("models/wood-bench-2-threejs/wood-bench-2.json", function ( obj ) {
+					obj.position.y = -150;
+					obj.position.x = -100;
+					obj.castShadow = true;
+                    obj.receiveShadow = true;
+				 	scene.add( obj );
+				} );
+
+
+				// STREET LIGHT
+				var objectLoader2 = new THREE.ObjectLoader();
+				objectLoader2.load("models/light-pole-threejs/light-pole.json", function ( obj ) {
+					obj.position.z = 70;
+					obj.position.y = 30;
+					obj.position.x = 200;
+					obj.rotation.y = Math.PI;
+					obj.scale.x = 15;
+                    obj.scale.y = 15;
+                    obj.scale.z = 15;
+                    obj.castShadow = true;
+                    obj.receiveShadow = true;
+				 	scene.add( obj );
+				} );
+
+
+				textureloader = new THREE.TextureLoader();
+
+
+				// WALL
+				wall_diffuse = textureloader.load("img/brickwork-texture.jpg" );
+				wall_diffuse.wrapS = THREE.RepeatWrapping; 
+				wall_diffuse.wrapT = THREE.RepeatWrapping;
+				wall_diffuse.repeat.set( 8, 2 ); 
+				
+				wall_bump = textureloader.load("img/brickwork-texture_bump.jpg" );
+				wall_bump.wrapS = THREE.RepeatWrapping; 
+				wall_bump.wrapT = THREE.RepeatWrapping;
+				wall_bump.repeat.set( 8, 2 );
+
+				wall_diffuse_material = new THREE.MeshPhongMaterial({ 
+					map : wall_diffuse,
+					bumpMap : wall_bump
+				});
+
+				wall_plane = new THREE.Mesh(new THREE.PlaneGeometry(1600, 400), wall_diffuse_material);
+				//wall_plane.material.side = THREE.DoubleSide;
+				wall_plane.position.z = 100;
+				wall_plane.position.x = 0;
+				wall_plane.position.y = 50;
+				wall_plane.rotation.x = Math.PI;
+				//wall_plane.castShadow = true;
+                wall_plane.receiveShadow = true;
+
+				scene.add(wall_plane);
+
+
+
+
+				// NEON CIRCLE
+				neon_circle_diffuse = textureloader.load("img/neon-circle.png" );
+				neon_circle_diffuse.wrapS = THREE.RepeatWrapping; 
+				neon_circle_diffuse.wrapT = THREE.RepeatWrapping;
+				neon_circle_diffuse.repeat.set( 1, 1 ); 
+
+				neon_circle_material = new THREE.MeshPhongMaterial({ 
+					map : neon_circle_diffuse
+				});
+
+				neon_circle_material.transparent = true;
+				neon_circle_material.emissive = new THREE.Color( 0xff00a2 );
+
+				neon_circle_plane = new THREE.Mesh(new THREE.PlaneGeometry(210, 90), neon_circle_material);
+				neon_circle_plane.material.side = THREE.DoubleSide;
+				neon_circle_plane.position.z = 90;
+				neon_circle_plane.position.x = -80;
+				neon_circle_plane.position.y = 150;
+				neon_circle_plane.rotation.y = Math.PI;
+
+				scene.add(neon_circle_plane);
+
+
+
+
+				// NEON DIMI
+				neon_dimi_diffuse = textureloader.load("img/neon-dimi.png" );
+				neon_dimi_diffuse.wrapS = THREE.RepeatWrapping; 
+				neon_dimi_diffuse.wrapT = THREE.RepeatWrapping;
+				neon_dimi_diffuse.repeat.set( 1, 1 ); 
+
+				neon_dimi_material = new THREE.MeshPhongMaterial({ 
+					map : neon_dimi_diffuse
+				});
+				neon_dimi_material.transparent = true;
+				neon_dimi_material.emissive = new THREE.Color( 0x66ff00 );
+				
+				neon_dimi_plane = new THREE.Mesh(new THREE.PlaneGeometry(210, 90), neon_dimi_material);
+				neon_dimi_plane.material.side = THREE.DoubleSide;
+				neon_dimi_plane.position.z = 90;
+				neon_dimi_plane.position.x = -80;
+				neon_dimi_plane.position.y = 150;
+				neon_dimi_plane.rotation.y = Math.PI;
+
+				scene.add(neon_dimi_plane);
+
+				// NEON KATIA
+				neon_katia_diffuse = textureloader.load("img/katia.png" );
+				neon_katia_diffuse.wrapS = THREE.RepeatWrapping; 
+				neon_katia_diffuse.wrapT = THREE.RepeatWrapping;
+				neon_katia_diffuse.repeat.set( 1, 1 ); 
+
+				neon_katia_material = new THREE.MeshPhongMaterial({ 
+					map : neon_katia_diffuse
+				});
+				neon_katia_material.transparent = true;
+				neon_katia_material.emissive = new THREE.Color( 0x77fffd );
+				
+				neon_katia_plane = new THREE.Mesh(new THREE.PlaneGeometry(210, 90), neon_katia_material);
+				neon_katia_plane.material.side = THREE.DoubleSide;
+				neon_katia_plane.position.z = 90;
+				neon_katia_plane.position.x = -80;
+				neon_katia_plane.position.y = 150;
+				neon_katia_plane.rotation.y = Math.PI;
+
+				scene.add(neon_katia_plane);
+
+
+
+
+
+				// GROUND
+				ground_diffuse = textureloader.load("img/asphalt-diffuse.jpg" );
+				ground_diffuse.wrapS = THREE.RepeatWrapping; 
+				ground_diffuse.wrapT = THREE.RepeatWrapping;
+				ground_diffuse.repeat.set( 16, 4 ); 
+
+				ground_bump = textureloader.load("img/asphalt-bump.jpg");
+				ground_bump.wrapS = THREE.RepeatWrapping; 
+				ground_bump.wrapT = THREE.RepeatWrapping;
+				ground_bump.repeat.set( 16, 4 );
+
+				ground_specular = textureloader.load("img/asphalt-specular.jpg");
+				ground_specular.wrapS = THREE.RepeatWrapping; 
+				ground_specular.wrapT = THREE.RepeatWrapping;
+				ground_specular.repeat.set( 16, 4 );
+
+				ground_material = new THREE.MeshPhongMaterial({ 
+					map : ground_diffuse,
+					bumpMap : ground_bump,
+					bumpScale : 0.7,
+					specular: 0xffffff,
+					shininess: 30,
+					specularMap: ground_specular
+				});
+
+				ground_plane = new THREE.Mesh(new THREE.PlaneGeometry(1600, 400), ground_material);
+				//ground_plane.material.side = THREE.DoubleSide;
+				ground_plane.position.z = 0;
+				ground_plane.position.x = 0;
+				ground_plane.position.y = -150;
+				ground_plane.rotation.x = 3*(Math.PI/2);
+				//ground_plane.castShadow = true;
+                ground_plane.receiveShadow = true;
+
+				scene.add(ground_plane);
+
+
+
+				// MANHOLE
+				manhole_diffuse = textureloader.load("img/manhole-cover-diffuse.png");
+				manhole_diffuse.wrapS = THREE.RepeatWrapping; 
+				manhole_diffuse.wrapT = THREE.RepeatWrapping;
+				manhole_diffuse.repeat.set( 1, 1 );
+
+				manhole_bump = textureloader.load("img/manhole-cover-bump.png");
+				manhole_bump.wrapS = THREE.RepeatWrapping; 
+				manhole_bump.wrapT = THREE.RepeatWrapping;
+				manhole_bump.repeat.set( 1, 1 );
+
+				manhole_specular = textureloader.load("img/manhole-cover-specular.png");
+				manhole_specular.wrapS = THREE.RepeatWrapping; 
+				manhole_specular.wrapT = THREE.RepeatWrapping;
+				manhole_specular.repeat.set( 1, 1 );
+
+				manhole_material = new THREE.MeshPhongMaterial({ 
+					map : manhole_diffuse,
+					bumpMap : manhole_bump,
+					specularMap : manhole_specular,
+					specular: 0xffffff,
+					shininess: 50,
+
+				});
+
+				manhole_material.transparent = true;
+
+				manhole_plane = new THREE.Mesh(new THREE.PlaneGeometry(100, 100), manhole_material);
+				manhole_plane.material.side = THREE.DoubleSide;
+				manhole_plane.position.z = -50;
+				manhole_plane.position.x = 150;
+				manhole_plane.position.y = -149;
+				manhole_plane.rotation.x = Math.PI/2;
+				//ground_plane.castShadow = true;
+                manhole_plane.receiveShadow = true;
+
+				scene.add(manhole_plane);
+
+
+
+
+				renderer = new THREE.WebGLRenderer({antialias : true, preserveDrawingBuffer: true});
+				renderer.domElement.id = 'renderer';
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.shadowMapEnabled = true;
+				renderer.shadowMapType = THREE.PCFSoftShadowMap;
+				container.appendChild( renderer.domElement );
+
+
+
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+
+
+				var ambiance_1_state = true;
+				var ambiance_2_state = false;
+
+
+				
+
+				showAmbiance1 = function(){
+					hideAmbiance2();
+					ambiance_1_lights.forEach(function(element) {	
+						element.intensity = 1;
+					});
+					ambiance_1_state = true;
+				}
+
+				showAmbiance2 = function(){
+					hideAmbiance1();
+					ambiance_2_lights.forEach(function(element) {
+						if(element === light1){
+							element.intensity = 1.5;
+						}else{
+							element.intensity = 1;
+						}
+						
+					});
+					ambiance_2_state = true;
+				}
+
+
+
+				hideAmbiance1 = function(){
+
+					ambiance_1_lights.forEach(function(element) {	
+						element.intensity = 0;
+					});
+					ambiance_1_state = false;
+				}
+
+				hideAmbiance2 = function(){
+
+					ambiance_2_lights.forEach(function(element) {	
+						element.intensity = 0;
+					});
+					ambiance_2_state = false;
+				}
+
+				hideAmbiance2();
+
+
+				
+
+				
+
+				window.addEventListener("keyup", function(e){
+				    var imgData, imgNode;
+				    //Listen to 'P' key
+				    //if(e.which !== 80) return;  
+				    if(e.which == 80){
+
+
+					    try {
+					        imgData = renderer.domElement.toDataURL("image/png");
+					        renderer.domElement.download = "Urbalight Screenshot - Nicolas Barroso.png"
+					        //console.log(imgData);
+					    } 
+					    catch(e) {
+					        console.log("Browser does not support taking screenshot of 3d context");
+					        return;
+					    }
+
+					   	/*document.getElementById("ambiance_1_button").style.display = 'none';
+					   	document.getElementById("ambiance_2_button").style.display = 'none';
+					   	document.getElementById("screenshot_button").style.display = 'none';
+					   	document.getElementById("picture_indication").style.display = 'none';*/
+					   	$("#ambiance_1_button, #ambiance_2_button, #screenshot_button, #picture_indication").css('display', 'none');
+
+			
+					   	document.getElementById("return_button").style.display = 'block';
+					   	document.getElementById("download_button").style.display = 'block';
+					   	
+					   	cancelAnimationFrame( rendering );
+					   	document.getElementById("renderer").style.display = 'none';
+
+					   	var screenshot = document.getElementById("picture");
+						screenshot.src = imgData;
+						screenshot.style.display = 'block';
+						screenshot.style.opacity = 1;
+						localStorage.setItem("imgData", imgData);
+
+						document.getElementById("return_button").addEventListener('click', returnToScene, false);
+
+
+						$("#download_button").attr({
+							'download': 'Urbalight Screenshot - Nicolas Barroso.png',
+							'href': imgData
+						});
+						
+
+						$("#download_button").click(function(event) {
+							window.location.href = imgData.getImageURI();
+						});
+						        
+
+					}
+
+				});
+				
+
+				returnToScene = function(){
+					/*document.getElementById("picture").style.display = 'none';
+					document.getElementById("return_button").style.display = 'none';
+					document.getElementById("download_button").style.display = 'none';*/
+					$("#picture, #return_button, #download_button").hide();
+					animate();
+
+					$("#renderer, #ambiance_1_button, #ambiance_2_button, #screenshot_button, #picture_indication").css('display', 'block');
+					/*document.getElementById("renderer").style.display = 'block';
+					document.getElementById("ambiance_1_button").style.display = 'block';
+					document.getElementById("ambiance_2_button").style.display = 'block';
+					document.getElementById("screenshot_button").style.display = 'block';
+					document.getElementById("picture_indication").style.display = 'block';*/
+				}
+
+				
+
+				
+
+				document.getElementById("ambiance_1_button").addEventListener('click', showAmbiance1, false);
+				document.getElementById("ambiance_2_button").addEventListener('click', showAmbiance2, false);
+
+
+			}
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function onDocumentMouseMove( event ) {
+
+				mouseX = ( event.clientX - windowHalfX ) / 2;
+				mouseY = ( event.clientY - windowHalfY ) / 2;
+
+			}
+
+			//
+
+			function animate() {
+
+				rendering = requestAnimationFrame( animate );
+				render();
+			}
+
+			function render() {
+
+				camera.position.x += ( mouseX - camera.position.x ) * .05;
+				camera.position.y += ( - mouseY - camera.position.y ) * .05;
+
+				camera.lookAt( scene.position );
+
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,212 @@
+/* Style */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #00000c;
+  overflow: hidden;
+}
+
+.sky-gradient {
+  position: relative;
+  z-index: 1;
+  float: left;
+  width: 5%;
+  height: 20%;
+  cursor: pointer;
+  transition: box-shadow 150ms, z-index 0ms;
+}
+
+.sky-gradient:hover {
+  z-index: 2;
+  box-shadow: 0 -5px 10px black;
+}
+
+.sky-gradient::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 2500%;
+  height: 400%;
+  background: inherit;
+  transform: translateZ(0);
+  opacity: 0;
+  transition: opacity 0s 1s;
+}
+
+.sky-gradient:hover::after {
+  opacity: 1;
+  transition: opacity 1s 0s;
+}
+
+.sky-gradient:nth-child(1)::after {
+  left: 0%;
+}
+
+.sky-gradient:nth-child(2)::after {
+  left: -200%;
+}
+
+.sky-gradient:nth-child(3)::after {
+  left: -200%;
+}
+
+.sky-gradient:nth-child(4)::after {
+  left: -300%;
+}
+
+.sky-gradient:nth-child(5)::after {
+  left: -400%;
+}
+
+.sky-gradient:nth-child(6)::after {
+  left: -500%;
+}
+
+.sky-gradient:nth-child(7)::after {
+  left: -600%;
+}
+
+.sky-gradient:nth-child(8)::after {
+  left: -700%;
+}
+
+.sky-gradient:nth-child(9)::after {
+  left: -800%;
+}
+
+.sky-gradient:nth-child(10)::after {
+  left: -900%;
+}
+
+.sky-gradient:nth-child(11)::after {
+  left: -1000%;
+}
+
+.sky-gradient:nth-child(12)::after {
+  left: -1100%;
+}
+
+.sky-gradient:nth-child(13)::after {
+  left: -1200%;
+}
+
+.sky-gradient:nth-child(14)::after {
+  left: -1300%;
+}
+
+.sky-gradient:nth-child(15)::after {
+  left: -1400%;
+}
+
+.sky-gradient:nth-child(16)::after {
+  left: -1500%;
+}
+
+.sky-gradient:nth-child(17)::after {
+  left: -1600%;
+}
+
+.sky-gradient:nth-child(18)::after {
+  left: -1700%;
+}
+
+.sky-gradient:nth-child(19)::after {
+  left: -1800%;
+}
+
+.sky-gradient:nth-child(20)::after {
+  left: -1900%;
+}
+
+.sky-gradient:nth-child(21)::after {
+  left: -2000%;
+}
+
+/* Gradients */
+/*twilight*/
+#sky-gradient-00, .sky-gradient-24 {
+  background: linear-gradient(#ce94e1, #22306d, #592d8e, #d32c88);
+}
+/*starlight glimmer*/
+#sky-gradient-01 {
+  background: linear-gradient(#eebef3, #622489, #802faf, #a2f0d9);
+}
+/*spike*/
+#sky-gradient-02 {
+  background: linear-gradient(#c48dc7, #b0d95f, #4bc453);
+}
+/*pinkie pie*/
+#sky-gradient-03 {
+  background: linear-gradient(#e4aad0, #e12d90);
+}
+/*rainbow dash*/
+#sky-gradient-04 {
+  background: linear-gradient(#9edbf9, #f13f40, #f37033, #fdf6af, #62bc4d, #1e98d3, #672f89);
+}
+/*flutershy*/
+#sky-gradient-05 {
+  background: linear-gradient(#fcf59b, #feb8da);
+}
+/*apple jack*/ 
+#sky-gradient-06 {
+  background: linear-gradient(#fcb058,#c19147, #e73438, #6eba41, #f8f2a4);
+}
+/*rarity*/
+#sky-gradient-07 {
+  background: linear-gradient(#e9edf1, #5f58a9, #7a4f94, #412367);
+}
+/*discord*/
+#sky-gradient-08 {
+  background: linear-gradient(#5a2a26, #a9a590, #a72d30, #00a0dc, #494b7f, #ebcd5d, #5ec253 );
+}
+/*celestia*/
+#sky-gradient-09 {
+  background: linear-gradient(#fbfcf6, #f3db83, #e7aaf7, #7ba3e9, #5ec8a0, #47b4d5);
+}
+/*luna*/
+#sky-gradient-10 {
+  background: linear-gradient(#2b4172, #104db7, #a299dc);
+}
+/*princesse cadance*/ 
+#sky-gradient-11 {
+  background: linear-gradient(#f1b2cd, #d8b5d3, #9180b7, #784b84, #e23189, #fdf0b9);
+}
+/*shining armor*/
+#sky-gradient-12 {
+  background: linear-gradient(#fdfdfd, #42adc1, #2b5190, #2b3a71);
+}
+/*scootaloo*/
+#sky-gradient-13 {
+  background: linear-gradient(#f5b666, #af4d8a);
+}
+/*sweetie belle*/
+#sky-gradient-14 {
+  background: linear-gradient(#ececec, #f1b5d7, #ab81c1 );
+}
+/*apple bloom*/ 
+#sky-gradient-15 {
+  background: linear-gradient(#f1f89b, #e3275a, #e95091);
+}
+/*derpie*/
+#sky-gradient-16 {
+  background: linear-gradient(#cfd0e4, #fdffac);
+}
+/*big macintosh*/
+#sky-gradient-17 {
+  background: linear-gradient(#ff3950, #a7f855, #febc4e);
+}
+/*DJ Pon*/
+#sky-gradient-18 {
+  background: linear-gradient(#fcfbf2, #2cffeb, #366ec8);
+}
+/*Mme Cake*/
+#sky-gradient-19 {
+  background: linear-gradient(#83dff4, #f2a8c1, #d43a6e);
+}
+/*Moon dancer*/
+#sky-gradient-20 {
+  background: linear-gradient(#f7fcd6, #d4425d, #ac89ce, #744a96);
+}
+

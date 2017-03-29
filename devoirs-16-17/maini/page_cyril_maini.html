@@ -1,0 +1,416 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exo Everardo Reyes - Cyril Maini 2016-2017</title>
+    <script src="js/two.min.js"></script>
+    <script src="js/anime.min.js"></script>
+    <style type="text/css">
+    .el{
+      width: 120px;
+      height: 1000px;
+      float: left;
+      background-color: #d9f;
+    }
+    .el2{
+      width: 120px;
+      height: 1000px;
+      float: left;
+      background-color: #454;
+    }
+    .el3{
+      width: 120px;
+      height: 1000px;
+      float: left;
+      background-color: #7FDEFF;
+    }
+    .el4{
+      width: 120px;
+      height: 1000px;
+      float: left;
+      background-color: #F5E6E8;
+    }
+    .el5{
+      width: 120px;
+      height: 1000px;
+      float: left;
+      background-color: #63D471;
+    }
+    .el6{
+      width: 120px;
+      height: 1000px;
+      float: left;
+      background-color: #DB7F8E;
+    }
+    .el7{
+      width: 120px;
+      height: 1000px;
+      float: left;
+      background-color: #E2C044;
+    }
+    .el8{
+      width: 120px;
+      height: 1000px;
+      float: left;
+      background-color: #C0D684;
+    }
+    .el9{
+      width: 120px;
+      height: 1000px;
+      float: left;
+      background-color: #F29559;
+    }
+    .el10{
+      width: 120px;
+      height: 1000px;
+      float: left;
+      background-color: #B1E5F2;
+    }
+
+    .couleur-fond{
+      background-color: #E8E9F3;
+      width: 100%;
+      height: 100%;
+    }
+
+    #relativeValues{
+      position: absolute;
+    }
+    </style>
+</head>
+<body>
+
+<div id="relativeValues">
+  <div class="square el"></div>
+  <div class="square el2"></div>
+  <div class="square el3"></div>
+  <div class="square el4"></div>
+  <div class="square el5"></div>
+  <div class="square el6"></div>
+  <div class="square el7"></div>
+  <div class="square el8"></div>
+  <div class="square el9"></div>
+  <div class="square el10"></div>
+</div>
+
+<div id="main"></div>
+
+<div class="couleur-fond"></div>
+
+    <script>
+var el = document.getElementById("main"),
+    two = new Two({ 
+        fullscreen: true
+    });
+ 
+two.appendTo(el);
+
+var earthAngle = 0,
+    moonAngle  = 0,
+    distance   = 30,
+    radius     = 50,
+    padding    = 100,
+    orbit      = 200,
+    offset     = orbit + padding,
+    orbits     = two.makeGroup();
+
+    var earthOrbit = two.makeCircle(offset, offset, orbit);
+    earthOrbit.noFill();
+    earthOrbit.linewidth = 4;
+    earthOrbit.stroke = "#D1D1D1";
+    orbits.add(earthOrbit);
+
+function getPositions(angle, orbit) {
+    return {
+        x: Math.cos(angle * Math.PI / 180) * orbit,
+        y: Math.sin(angle * Math.PI / 180) * orbit
+    };
+}
+
+var pos = getPositions(earthAngle++, orbit),
+    earth = two.makeCircle(pos.x + offset, pos.y + offset, radius);
+    earth.stroke = "#5BC0EB";
+    earth.linewidth = 0;
+    earth.fill = "#5BC0EB";
+
+var moonOrbit = two.makeCircle(earth.translation.x, earth.translation.y, radius + distance);
+  moonOrbit.noFill();
+  moonOrbit.linewidth = 0;
+  moonOrbit.stroke = "#D1D1D1";
+  orbits.add(moonOrbit);
+  orbits.visible = false;
+ 
+var pos = getPositions(moonAngle, radius + distance), 
+    moon = two.makeCircle(earth.translation.x + pos.x, earth.translation.y + pos.y, radius / 4);
+ 
+  moonAngle += 5;
+  moon.fill = "#D1D1D1";
+  moon.noStroke();
+
+var sun = two.makeCircle(earth.translation.x / 1.65, earth.translation.y, radius + 25);
+  sun.linewidth = 0;
+  sun.fill = "#ffe036";
+
+var star = two.makeStar(650, 250, 78, 40, 8);
+star.fill ="#DD7373";
+star.noStroke();
+
+// faire tourner l'étoile
+
+two.bind('update', function(frameCount) {
+  if (star.scale > 0.9999) {
+    star.scale = star.rotation = 0;
+  }
+  var t = (1 - star.scale) * 0.1;
+  star.scale += t;
+  star.rotation += t * 20 * Math.PI;
+}).play();
+
+// faire tourner le soleil
+
+two.bind('update', function(frameCount) {
+  if (sun.scale > 0.9999) {
+    sun.scale = sun.rotation = 0;
+  }
+  var t = (1 - sun.scale) * 0.1;
+  sun.scale += t;
+  sun.rotation += t * 4 * Math.PI;
+}).play();
+
+//
+
+
+two.update();
+
+two.bind("update", function (frameCount) {
+    var pos = getPositions(earthAngle++, orbit);
+    earth.translation.x = pos.x + offset;
+    earth.translation.y = pos.y + offset;
+
+    var moonPos = getPositions(moonAngle, radius + distance);
+    moon.translation.x = earth.translation.x + moonPos.x;
+    moon.translation.y = earth.translation.y + moonPos.y;
+    moonAngle += 5;
+ 
+moonOrbit.translation.x = earth.translation.x;
+moonOrbit.translation.y = earth.translation.y;
+
+});
+ 
+two.play();
+
+    </script>
+
+    <script>
+
+var relativeValues = anime({
+  targets: '#relativeValues .el',
+  loop: true,
+  autoplay: true,
+  width: {
+    value: '100',
+    duration: 2000,
+    easing: 'easeInOutSine',
+  },
+  height: {
+    value: '50',
+    duration: 2000,
+    easing: 'easeInOutSine',
+  },
+  direction: 'alternate'
+});
+
+var relativeValues = anime({
+  targets: '#relativeValues .el2',
+  loop: true,
+  autoplay: true,
+  // translateX: {
+  //   value: '+100',
+  //   duration: 1000
+  // },
+  width: {
+    value: '100',
+    duration: 2200,
+    easing: 'easeInOutSine'
+  },
+  height: {
+    value: '100',
+    duration: 2200,
+    easing: 'easeInOutSine'
+  },
+  direction: 'alternate'
+});
+
+var relativeValues = anime({
+  targets: '#relativeValues .el3',
+  loop: true,
+  autoplay: true,
+  // translateX: {
+  //   value: '+100',
+  //   duration: 1000
+  // },
+  width: {
+    value: '100',
+    duration: 2400,
+    easing: 'easeInOutSine'
+  },
+  height: {
+    value: '150',
+    duration: 2400,
+    easing: 'easeInOutSine'
+  },
+  direction: 'alternate'
+});
+
+var relativeValues = anime({
+  targets: '#relativeValues .el4',
+  loop: true,
+  autoplay: true,
+  // translateX: {
+  //   value: '+100',
+  //   duration: 1000
+  // },
+  width: {
+    value: '100',
+    duration: 2600,
+    easing: 'easeInOutSine'
+  },
+  height: {
+    value: '200',
+    duration: 2600,
+    easing: 'easeInOutSine'
+  },
+  direction: 'alternate'
+});
+
+var relativeValues = anime({
+  targets: '#relativeValues .el5',
+  loop: true,
+  autoplay: true,
+  // translateX: {
+  //   value: '+100',
+  //   duration: 1000
+  // },
+  width: {
+    value: '100',
+    duration: 2800,
+    easing: 'easeInOutSine'
+  },
+  height: {
+    value: '250',
+    duration: 2800,
+    easing: 'easeInOutSine'
+  },
+  direction: 'alternate'
+});
+
+var relativeValues = anime({
+  targets: '#relativeValues .el6',
+  loop: true,
+  autoplay: true,
+  // translateX: {
+  //   value: '+100',
+  //   duration: 1000
+  // },
+  width: {
+    value: '100',
+    duration: 3000,
+    easing: 'easeInOutSine'
+  },
+  height: {
+    value: '300',
+    duration: 3000,
+    easing: 'easeInOutSine'
+  },
+  direction: 'alternate'
+});
+
+var relativeValues = anime({
+  targets: '#relativeValues .el7',
+  loop: true,
+  autoplay: true,
+  // translateX: {
+  //   value: '+100',
+  //   duration: 1000
+  // },
+  width: {
+    value: '100',
+    duration: 3200,
+    easing: 'easeInOutSine'
+  },
+  height: {
+    value: '350',
+    duration: 3400,
+    easing: 'easeInOutSine'
+  },
+  direction: 'alternate'
+});
+
+var relativeValues = anime({
+  targets: '#relativeValues .el8',
+  loop: true,
+  autoplay: true,
+  // translateX: {
+  //   value: '+100',
+  //   duration: 1000
+  // },
+  width: {
+    value: '100',
+    duration: 3600,
+    easing: 'easeInOutSine'
+  },
+  height: {
+    value: '400',
+    duration: 3600,
+    easing: 'easeInOutSine'
+  },
+  direction: 'alternate'
+});
+
+var relativeValues = anime({
+  targets: '#relativeValues .el9',
+  loop: true,
+  autoplay: true,
+  // translateX: {
+  //   value: '+100',
+  //   duration: 1000
+  // },
+  width: {
+    value: '100',
+    duration: 3800,
+    easing: 'easeInOutSine'
+  },
+  height: {
+    value: '450',
+    duration: 3800,
+    easing: 'easeInOutSine'
+  },
+  direction: 'alternate'
+});
+
+var relativeValues = anime({
+  targets: '#relativeValues .el10',
+  loop: true,
+  autoplay: true,
+  // translateX: {
+  //   value: '+100',
+  //   duration: 1000
+  // },
+  width: {
+    value: '100',
+    duration: 4000,
+    easing: 'easeInOutSine'
+  },
+  height: {
+    value: '500',
+    duration: 4000,
+    easing: 'easeInOutSine'
+  },
+  direction: 'alternate'
+});
+
+    </script>
+
+
+  </body>
+</html>

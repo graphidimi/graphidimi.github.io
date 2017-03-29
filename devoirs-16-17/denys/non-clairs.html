@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<title>DIMI</title>
+    <meta name="description" content="Le Destin Incertain d'un Majestueux Inconu">
+    <meta name="author" content="Michele Balboa, Manon Denys, Celia Benouari, Myriame Hammoumi">
+
+	<link rel="stylesheet" type="text/css" href="css/aos.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src="js/aos.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$('#btn_clairs').click(function(){
+				$('#section-clairs').show();
+				$('#section-clairs').css('overflow','scroll');
+			});
+		});
+	</script>
+		
+	<title>DIMI</title>
+
+</head>
+
+<body>
+
+		<section class="section section--code">
+			<div class="container">
+				<div id="container15" class="code code--wider code--left cases" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+					<div id="text-box-container15" class="box-text">
+						<p>L'ovule s'en alla et ce petit prince ne vit jamais le jour.</p>
+					</div>
+				</div>
+				<div id="container16" class="code code--small code--right cases" data-aos="fade-left">
+					<div id="text-box-container16" class="box-text">
+						<h4>Bref, mieux vaut être un baratineur !</h4>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		
+
+
+	</section>
+
+		<script>
+			AOS.init({
+				easing: 'ease-out-back',
+				duration: 1000
+			});
+		</script>
+
+		<script>
+			hljs.initHighlightingOnLoad();
+
+			$('.hero__scroll').on('click', function(e) {
+				$('html, body').animate({
+					scrollTop: $(window).height()
+				}, 1200);
+			});
+		</script>
+
+</body>
+</html>

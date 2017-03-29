@@ -1,0 +1,73 @@
+<html>
+  <head>
+  	<title>Mascotte DIMI</title>
+  	<link rel="stylesheet" type="text/css" href="monStyle.css" />	
+    
+    <script src="monScript.min.js"></script>
+    <script type="text/javascript" src="snow.js"></script>
+  	<script type="text/javascript">
+  		window.onload = function(){
+  			snow.init(50);
+  		};
+  	</script>
+  </head>
+
+  <body>
+
+    <div id="lettreD" align="center">
+
+      <svg viewBox="0 0 300 300"
+           xmlns="http://www.w3.org/2000/svg" 
+           xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <defs>
+          <style>.lettre{fill:none; stroke-linecap:round; stroke-linejoin:round;}</style>
+          <path id="MyPathD" class="lettre" d="M105.58,64.38a43,43,0,0,1-2.37,14.8,31.35,31.35,0,0,1-6.65,11A28.2,28.2,0,0,1,86.33,97a35.49,35.49,0,0,1-13.15,2.35h-25v-70h25a35.51,35.51,0,0,1,13.15,2.35,28.21,28.21,0,0,1,10.23,6.85,31.36,31.36,0,0,1,6.65,11A43,43,0,0,1,105.58,64.38Z"/>
+          <path id="MyPathI1" class="lettre" d="M124.13,99.38v-70"/>
+          <path id="MyPathM" class="lettre" d="M148.52,99.38v-70h.4a.79.79,0,0,1,.7.4l31.8,53.55a5.4,5.4,0,0,1,.33.55c.08.17.16.33.22.5q.1-.25.23-.5a5,5,0,0,1,.32-.55l30.8-53.55a.78.78,0,0,1,.7-.4h.4v70"/>
+          <path id="MyPathI2" class="lettre" d="M237.62,99.38v-70"/>
+        </defs>
+
+        <!-- Affiche les lettres SVG -->
+        <use xlink:href="#MyPathD" fill="none" stroke="white"  />
+        <use xlink:href="#MyPathI1" fill="none" stroke="white"  />
+        <use xlink:href="#MyPathM" fill="none" stroke="white"  />
+        <use xlink:href="#MyPathI2" fill="none" stroke="white"  />
+
+        <!-- Crée les balles qui suivent la lettre -->
+        <g id="balle1" stroke="none" fill="white" transform="rotate(45)">
+          <circle r="5" />
+          <animateMotion attributeName="transform" type="scale" from="30" to="470" additive="sum" begin="0s" dur="10s" repeatCount="indefinite"  >
+            <mPath xlink:href="#MyPathD" />
+          </animateMotion>
+        </g>
+
+        <g id="balle1" stroke="none" fill="white">
+          <circle r="5" />
+          <animateMotion begin="0s" dur="5s" repeatCount="indefinite">
+            <mPath xlink:href="#MyPathI1" />
+          </animateMotion>
+        </g>
+
+        <g id="balle1" stroke="none" fill="white">
+          <circle r="5" />
+          <animateMotion begin="0s" dur="5s" repeatCount="indefinite">
+            <mPath xlink:href="#MyPathM" />
+          </animateMotion>
+        </g>
+
+        <g id="balle1" stroke="none" fill="white">
+          <circle r="5" />
+          <animateMotion begin="0s" dur="5s" repeatCount="indefinite">
+             <mPath xlink:href="#MyPathI2" />
+          </animateMotion>
+        </g>
+
+      </svg>
+
+    </div>
+    
+  	<div class="tuna"></div>
+
+  </body>
+</html>

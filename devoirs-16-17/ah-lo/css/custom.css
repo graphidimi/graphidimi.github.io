@@ -1,0 +1,40 @@
+.player-button--rotate {
+	display: none;
+}
+.effects {
+	display: none;
+}
+main {
+	background-color: #020107;
+}
+.page-header__title {
+	background-color : none;
+	}
+
+.deco-expander {
+	background-color : #020107;
+}
+
+.view view--player{
+	background-color : #020107;
+}
+
+.player-stand{
+	background-color : #020107;
+}
+
+.view view--single{
+	background-color: #020107;
+}
+
+.single single--current{
+	background-color: #020107;
+}
+
+.view view--grid{
+	background-color: #020107;
+}
+
+.cursor-blocked {
+	cursor: not-allowed;
+}

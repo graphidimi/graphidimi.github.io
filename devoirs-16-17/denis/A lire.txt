@@ -1,0 +1,29 @@
+J'ai utilisé pour ce projet différents codes trouvé sur internet.
+
+
+// Défilement Parallax 
+
+Lien : http://codepen.io/e11world/pen/QGbNMe
+
+J'ai utilisé ce code que j'ai modifié légèrement afin d'avoir une vitesse de défilement plus lente pour les différents plans.
+J'ai également modifié les différentes images en utilisant illustrator afin de faire un décor de montagne.
+
+
+
+
+// Neige
+
+Lien : http://codepen.io/ivanodintsov/pen/KVgwRG
+
+Je me suis servi de ce code afin de rajouter de la neige qui tombe. J'ai également modifié légèrement ce code afin de changer la quantité
+de neige qui tombe à l'écran ainsi que sa vitesse.
+
+
+
+
+// Soucoupe volante
+
+Lien : http://stackoverflow.com/questions/27123399/how-to-move-an-image-up-and-down-smoothly-with-css
+
+Pour faire "voler" la soucoupe volante, je me suis servi d'un code trouvé sur Stackoverflow. J'ai également modifié un peu ce code afin de 
+changer l'animation.

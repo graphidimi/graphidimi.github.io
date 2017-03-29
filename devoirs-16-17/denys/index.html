@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<title>DIMI</title>
+    <meta name="description" content="Le Destin Incertain d'un Majestueux Inconu">
+    <meta name="author" content="Michele Balboa, Manon Denys, Celia Benouari, Myriame Hammoumi">
+
+	<link rel="stylesheet" type="text/css" href="css/aos.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/progress.css">
+	<script type="text/javascript" src="js/aos.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/skrollr.min.js"></script>
+
+
+	<title>DIMI</title>
+
+</head>
+
+<body style="height:1252px !important; ">
+		<header class="hero">
+				<img src="img/img-hero-2.png" width="68%" id="img-hero-2">
+				<img src="img/img-hero-3.png" width="70%" id="img-hero-3">
+				<img src="img/img-hero-1.png" width="47%" id="img-hero-1">
+			<div class="hero-center">		
+				<h1 class="hero__logo" data-aos="fade-down">LANCER LA BD</h1>
+			</div>
+			<span class="hero__scroll" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
+				Défiler vers le bas<br>
+				<i class="chevron bottom"></i>
+			</span>
+		</header>
+
+		<section class="section section--code">
+			<div class="container">
+				<div class="col-lg-11 col-sm-11">
+					<div id="container1" class="code code--wider code--left cases" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+						<h2>LA GRAND CROISADE</h2>
+					</div>
+				</div>
+				<div id="container2" class="code code--small code--left cases" data-aos="fade-right">
+					<p>Vous êtes le chevalier spermatozoïde, futur prince du royaume et vous êtes en route afin de parcourir  votre chemin pour atteindre la reine Ovule. <br> En tant que futur prince vous faite face à votre première guerre qui oppose ici, les  spermatozoïde aux yeux foncés et ceux aux yeux clairs. Chaque catégorie se bat pour faire triompher sa troupe et passer dans l’autre monde, celui des vivants...</p>
+				</div>
+				<div id="container3" class="code code--small code--right cases" data-aos="fade-left">
+				</div>
+				<div id="container4" class="code code--small code--left cases" data-aos="fade-right">
+					<div id="text-box-container4">
+						<p>La course débouta et les spermatozoïdes se déplaçaient a une très vive allure.</p>
+					</div>
+				</div>
+				<div id="container5" class="code code--small code--right cases" data-aos="fade-left">
+					<div id="text-box-container5">
+						<p>Il ne restait que deux spermatozoïdes en compétition. Chacun de deux représentait un champs : celui des yeux foncés et celui des yeux clairs. <br> Tous deux souhaitaient séduire la reine ovule à toute prix.</p>
+					</div>
+				</div>
+
+				<div id="container6" class="code code--small code--left cases" data-aos="flip-up">
+
+					<div id="text-box-container6" onclick="location='fonces.html'">
+						<h3>FONCES</h3>
+					</div>
+					<div class="question">
+						<h2>TES YEUX SONT . . .</h2>
+					</div>
+				</div>
+				<div id="container7" class="code code--small code--right cases" data-aos="flip-down" onclick="location='clairs.html'"> 
+						<div id="text-box-container7" >
+							<h3>CLAIRS</h3>
+						</div>
+				</div>
+				<!--barre-bas-menu-->
+<div id="slidebottom" class="slide">
+  <div id="button" class="spinEffect"><i id="fleche" class="chevron top"></i></div>
+  <div class="inner">
+  <p id="chapitre">CHAPITRE 1</p>
+  <div class="back">
+				<div id="progress" data-0="width:0%;background:hsl(0, 0%, 80%);" data-end="width:100%;background:hsl(0, 0%, 20%)"></div>
+				<!--changer nombre de data pour réduire taille body-->
+				<div data-500="top[cubic]:100%;border-radius[cubic]:0em;background:rgb(0,50,100);border-width:0px;" data-600="top:10%;border-radius:2em;background:rgb(190,230,255);border-width:10px;"></div>
+</div>
+</div>
+</div>
+				<!--fin menu-barre-bas-menu-->
+
+		</section>
+
+
+		<script>
+			AOS.init({
+				easing: 'ease-out-back',
+				duration: 1000
+			});
+		</script>
+
+		<script>
+			hljs.initHighlightingOnLoad();
+
+			$('.hero__scroll').on('click', function(e) {
+				$('html, body').animate({
+					scrollTop: $(window).height()
+				}, 1200);
+			});
+		</script>
+
+<!--volet bottom-->
+<script>
+$(document).ready(function() {
+  $("#button").click(function(){
+    $("#button").toggleClass("spinEffect");
+  });
+  $('#slidebottom #button').click(function() {
+    $(this).next().slideToggle();
+  });
+
+  $('#slidewidth #button').click(function() {
+    $(this).next().animate({width: 'toggle'});
+  });
+  
+  $('#slideleft #button').click(function() {
+    var $lefty = $(this).next();
+    $lefty.animate({left: parseInt($lefty.css('left'),10) == 0 ? -$lefty.outerWidth() : 0});
+  });
+
+  $('#slidemarginleft #button').click(function() {
+    var $marginLefty = $(this).next();
+    $marginLefty.animate({marginLeft: parseInt($marginLefty.css('marginLeft'),10) == 0 ? $marginLefty.outerWidth() : 0});
+  });
+  
+  $('#slidewidthsome #button').click(function() {
+    var $some = $(this).next(),
+    someWidth = $some.outerWidth(),
+    parentWidth = $some.parent().width();
+    $some.animate({width: someWidth === parentWidth ? someWidth/2 : parentWidth - (parseInt($some.css('paddingLeft'),10) + parseInt($some.css('paddingRight'),10))});
+  });  
+});
+
+
+</script>
+<!--fin volet bottom-->
+
+
+	<!--progress barre-->
+		<!--[if lt IE 9]>
+	<script type="text/javascript" src="../skrollr-ie/dist/skrollr.ie.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+	skrollr.init({
+		edgeStrategy: 'set',
+		easing: {
+			WTF: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			}
+		}
+	});
+	</script>
+	<!--fin progress barre-->
+	<!--rotation fleche-->
+	<!--fin rotation fleche-->
+
+</body>
+</html>
