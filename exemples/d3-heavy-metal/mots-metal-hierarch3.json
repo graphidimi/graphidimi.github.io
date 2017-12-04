@@ -1,0 +1,696 @@
+[
+  {
+  "name":"Mots",
+  "children": [{
+    "name": "life",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "Black Sabbath, Vol. 4",
+        "class": "Album",
+        "size": 2,
+        "color": "1972",
+        "label": null
+      }, {
+        "name": "Sabbath Bloody Sabbath",
+        "class": "Album",
+        "size": 1,
+        "color": "1973",
+        "label": null
+      }, {
+        "name": "Sabotage",
+        "class": "Album",
+        "size": 1,
+        "color": "1975",
+        "label": null
+      }]
+    }, {
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "A Matter Of Life And Death",
+        "class": "Album",
+        "size": 2,
+        "color": "2006",
+        "label": null
+      }]
+    }, {
+      "name": "Megadeth",
+      "class": "Artiste",
+      "children": [{
+        "name": "Countdown To Extinction",
+        "class": "Album",
+        "size": 2,
+        "color": "1992",
+        "label": null
+      }, {
+        "name": "Th1rt3en",
+        "class": "Album",
+        "size": 2,
+        "color": "2011",
+        "label": null
+      }]
+    }, {
+      "name": "Metallica",
+      "class": "Artiste",
+      "children": [{
+        "name": "Death Magnetic",
+        "class": "Album",
+        "size": 1,
+        "color": "2008",
+        "label": null
+      }]
+    }, {
+      "name": "Pantera",
+      "class": "Artiste",
+      "children": [{
+        "name": "Vulgar Display Of Power",
+        "class": "Album",
+        "size": 2,
+        "color": "1992",
+        "label": null
+      }, {
+        "name": "Cowboys From Hell",
+        "class": "Album",
+        "size": 1,
+        "color": "1990",
+        "label": null
+      }]
+    }, {
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "Dante XXI",
+        "class": "Album",
+        "size": 2,
+        "color": "2006",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "time",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "Paranoid",
+        "class": "Album",
+        "size": 1,
+        "color": "1970",
+        "label": null
+      }]
+    }, {
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "Dance Of Death",
+        "class": "Album",
+        "size": 2,
+        "color": "2003",
+        "label": null
+      }, {
+        "name": "Somewhere In Time",
+        "class": "Album",
+        "size": 1,
+        "color": "1986",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "world",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "Master of Reality",
+        "class": "Album",
+        "size": 1,
+        "color": "1971",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "die",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "Heaven & Hell",
+        "class": "Album",
+        "size": 1,
+        "color": "1980",
+        "label": null
+      }]
+    }, {
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "Piece Of Mind",
+        "class": "Album",
+        "size": 1,
+        "color": "1983",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "evil",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "Black Sabbath",
+        "class": "Album",
+        "size": 1,
+        "color": "1970",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "god",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "13",
+        "class": "Album",
+        "size": 1,
+        "color": "2013",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "death",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "Headless Cross",
+        "class": "Album",
+        "size": 2,
+        "color": "1989",
+        "label": null
+      }]
+    }, {
+      "name": "Metallica",
+      "class": "Artiste",
+      "children": [{
+        "name": "Ride the Lightning",
+        "class": "Album",
+        "size": 2,
+        "color": "1984",
+        "label": null
+      }]
+    }, {
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "Schizophrenia",
+        "class": "Album",
+        "size": 2,
+        "color": "1987",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "turn",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "Mob Rules",
+        "class": "Album",
+        "size": 1,
+        "color": "1981",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "charlotte",
+    "class": "Mots",
+    "children": [{
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "Iron Maiden",
+        "class": "Album",
+        "size": 1,
+        "color": "1980",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "run",
+    "class": "Mots",
+    "children": [{
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "The Number Of The Beast",
+        "class": "Album",
+        "size": 1,
+        "color": "1982",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "seven",
+    "class": "Mots",
+    "children": [{
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "Seventh Son Of A Seventh Son",
+        "class": "Album",
+        "size": 1,
+        "color": "1988",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "village",
+    "class": "Mots",
+    "children": [{
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "Powerslave",
+        "class": "Album",
+        "size": 1,
+        "color": "1984",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "murders",
+    "class": "Mots",
+    "children": [{
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "Killers",
+        "class": "Album",
+        "size": 1,
+        "color": "1981",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "dream",
+    "class": "Mots",
+    "children": [{
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "Brave New World",
+        "class": "Album",
+        "size": 2,
+        "color": "2000",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "mother",
+    "class": "Mots",
+    "children": [{
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "The Final Frontier",
+        "class": "Album",
+        "size": 2,
+        "color": "2010",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "united",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "British Steel",
+        "class": "Album",
+        "size": 1,
+        "color": "1980",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "stand",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Stained Class",
+        "class": "Album",
+        "size": 2,
+        "color": "1978",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "leather",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Painkiller",
+        "class": "Album",
+        "size": 1,
+        "color": "1990",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "night",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Defenders Of The Faith",
+        "class": "Album",
+        "size": 1,
+        "color": "1984",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "pain",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Screaming For Vengeance",
+        "class": "Album",
+        "size": 1,
+        "color": "1982",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "rose",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Sin After Sin",
+        "class": "Album",
+        "size": 2,
+        "color": "1977",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "tyrant",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Sad Wings Of Destiny",
+        "class": "Album",
+        "size": 2,
+        "color": "1976",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "blood",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Redeemer Of Souls",
+        "class": "Album",
+        "size": 2,
+        "color": "2014",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "desert",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Point Of Entry",
+        "class": "Album",
+        "size": 2,
+        "color": "1981",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "island",
+    "class": "Mots",
+    "children": [{
+      "name": "Megadeth",
+      "class": "Artiste",
+      "children": [{
+        "name": "Peace Sells... But Who's Buying?",
+        "class": "Album",
+        "size": 2,
+        "color": "1986",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "master",
+    "class": "Mots",
+    "children": [{
+      "name": "Megadeth",
+      "class": "Artiste",
+      "children": [{
+        "name": "Rust In Peace",
+        "class": "Album",
+        "size": 2,
+        "color": "1990",
+        "label": null
+      }]
+    }, {
+      "name": "Metallica",
+      "class": "Artiste",
+      "children": [{
+        "name": "Master of Puppets",
+        "class": "Album",
+        "size": 2,
+        "color": "1986",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "dead",
+    "class": "Mots",
+    "children": [{
+      "name": "Megadeth",
+      "class": "Artiste",
+      "children": [{
+        "name": "The System Has Failed",
+        "class": "Album",
+        "size": 2,
+        "color": "2004",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "dog",
+    "class": "Mots",
+    "children": [{
+      "name": "Megadeth",
+      "class": "Artiste",
+      "children": [{
+        "name": "Endgame",
+        "class": "Album",
+        "size": 2,
+        "color": "2009",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "play",
+    "class": "Mots",
+    "children": [{
+      "name": "Megadeth",
+      "class": "Artiste",
+      "children": [{
+        "name": "United Abominations",
+        "class": "Album",
+        "size": 2,
+        "color": "2007",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "thing",
+    "class": "Mots",
+    "children": [{
+      "name": "Megadeth",
+      "class": "Artiste",
+      "children": [{
+        "name": "Cryptic Writings",
+        "class": "Album",
+        "size": 2,
+        "color": "1997",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "metal",
+    "class": "Mots",
+    "children": [{
+      "name": "Metallica",
+      "class": "Artiste",
+      "children": [{
+        "name": "Kill 'Em All",
+        "class": "Album",
+        "size": 2,
+        "color": "1983",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "shortest",
+    "class": "Mots",
+    "children": [{
+      "name": "Metallica",
+      "class": "Artiste",
+      "children": [{
+        "name": "...And Justice for All",
+        "class": "Album",
+        "size": 2,
+        "color": "1988",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "struggle",
+    "class": "Mots",
+    "children": [{
+      "name": "Metallica",
+      "class": "Artiste",
+      "children": [{
+        "name": "Metallica",
+        "class": "Album",
+        "size": 1,
+        "color": "1991",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "biotech",
+    "class": "Mots",
+    "children": [{
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "Chaos A.D.",
+        "class": "Album",
+        "size": 1,
+        "color": "1993",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "born",
+    "class": "Mots",
+    "children": [{
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "Arise",
+        "class": "Album",
+        "size": 2,
+        "color": "1991",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "hate",
+    "class": "Mots",
+    "children": [{
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "Beneath The Remains",
+        "class": "Album",
+        "size": 2,
+        "color": "1989",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "roots",
+    "class": "Mots",
+    "children": [{
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "Roots",
+        "class": "Album",
+        "size": 2,
+        "color": "1996",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "mind",
+    "class": "Mots",
+    "children": [{
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "A-Lex",
+        "class": "Album",
+        "size": 2,
+        "color": "2009",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "walk",
+    "class": "Mots",
+    "children": [{
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "Roorback",
+        "class": "Album",
+        "size": 1,
+        "color": "2003",
+        "label": null
+      }]
+    }]
+  }, {
+    "name": "zombie",
+    "class": "Mots",
+    "children": [{
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "The Mediator Between Head And Hands Must Be The Heart",
+        "class": "Album",
+        "size": 1,
+        "color": "2013",
+        "label": null
+      }]
+    }]
+  }]
+}
+]

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body { background-color: rgb(100,100,100);}
+      #my_image { width: 500px; height: 500px; background: url(poseidon.jpg); background-size: cover;}
+      .dot {
+        position: absolute;
+        width: 25px; height: 25px;
+        border-radius:25px;
+        background-color: chartreuse;
+        opacity: 0.5;
+      }
+      .dot2 {
+        position: absolute;
+        width: 25px; height: 25px;
+        border-radius:25px;
+        background-color: yellow;
+        opacity: 0.5;
+      }
+      .rect {
+        float: left;
+        width: 50px; height: 50px;
+      }
+
+      #viz04 {
+        position: absolute;
+        top: 650px; left: 100px;
+        border: 1px solid gray;
+        width: 500px; height: 50px;
+      }
+      div {
+        position: absolute;
+        left: 100px; top: 100px;
+        width: 500px;
+      }
+    </style>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+        $.getJSON("landmarks1.json", function(data){
+          $.each(data.landmarks, function(i, d){
+                    var v = '<span class="dot2" style="top:';
+                    v += d.position.y +'px; left:'+d.position.x+'px;"></span>';
+
+                    $("#viz02").append(v);
+
+          });
+        });
+
+
+
+        $.getJSON("landmarks2.json", function(data){
+          $.each(data.landmarks, function(i, d){
+                    var v = '<span class="dot" style="top:';
+                    v += d.position.y +'px; left:'+d.position.x+'px;"></span>';
+
+                    $("#viz03").append(v);
+
+          });
+        });
+
+        $('#r02').click(function(){
+          $("#viz02, #viz03").fadeToggle();
+        });
+
+        $.getJSON("colors.json", function(data){
+          $.each(data.colors, function(i, d){
+                    var v = '<span class="rect" style="background-color:rgb(';
+                    v += d.color.red +','+ d.color.green +','+ d.color.blue +');"></span>';
+
+                    $("#viz04").append(v);
+
+          });
+        });
+
+      });
+
+
+    </script>
+  </head>
+  <body>
+    <button id="r02">Toggle dots</button>
+    <div id="my_image"></div>
+    <div id="viz02"></div>
+    <div id="viz03"></div>
+    <div id="viz04">
+
+    </div>
+  </body>
+</html>

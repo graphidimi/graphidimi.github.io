@@ -1,0 +1,111 @@
+<html>
+<head>
+<style>
+
+  canvas {
+    border:1px solid gray;
+    display: block;
+    position: absolute;
+    top: 30px; left: 20px;
+  }
+
+</style>
+<script src="jquery-3.1.1.min.js"></script>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    var canvas = document.getElementById('canv');
+    var context = canvas.getContext('2d');
+    $.getJSON("rec01.json", function(data){
+
+      //context.beginPath();
+
+
+      $.each(data.user, function(i, d){
+
+        /*
+        context.strokeStyle = 'rgba(0,255,0,0.2)';
+        context.lineWidth = 2;
+        context.beginPath();
+        context.moveTo(d.x,d.y);
+        */
+
+        //context.bezierCurveTo(d.x, d.x,d.y, d.y);
+
+
+        context.fillStyle = 'rgba(255, 125, 0, 0.3)';
+        context.strokeStyle = 'rgba(255,110,0,0.2)';
+        context.lineWidth = 1;
+
+        context.lineTo(d.x, d.y);
+        context.moveTo(d.x, d.y);
+
+        context.arc(d.x, d.y, 10, 0, 2*Math.PI);
+        //context.rect(d.x, d.y, 20, 20);
+        //context.quadraticCurveTo(d.x, d.x, d.y, d.y);
+        //context.bezierCurveTo(d.x, d.y,d.x, d.y, d.x,d.y);
+        context.closePath();
+
+
+      });
+      context.stroke();
+      context.fill();
+    });
+
+    var canvas2 = document.getElementById('canv2');
+    var context2 = canvas2.getContext('2d');
+    $.getJSON("rec02.json", function(data){
+
+      //context.beginPath();
+
+
+      $.each(data.user, function(i, d){
+
+        /*
+        context.strokeStyle = 'rgba(0,255,0,0.2)';
+        context.lineWidth = 2;
+        context.beginPath();
+        context.moveTo(d.x,d.y);
+        */
+
+        //context.bezierCurveTo(d.x, d.x,d.y, d.y);
+
+
+        context2.fillStyle = 'rgba(0, 255, 200, 0.3)';
+        context2.strokeStyle = 'rgba(0,235,200,0.2)';
+        context2.lineWidth = 1;
+
+        context2.lineTo(d.x, d.y);
+        context2.moveTo(d.x, d.y);
+
+        context2.arc(d.x, d.y, 10, 0, 2*Math.PI);
+        //context.rect(d.x, d.y, 20, 20);
+        //context.quadraticCurveTo(d.x, d.x, d.y, d.y);
+        //context.bezierCurveTo(d.x, d.y,d.x, d.y, d.x,d.y);
+        context2.closePath();
+
+
+      });
+      context2.stroke();
+      context2.fill();
+    });
+
+    $('#r01').click(function(){
+      $("#canv").fadeToggle();
+    });
+
+    $('#r02').click(function(){
+      $("#canv2").fadeToggle();
+    });
+
+  });
+</script>
+</head>
+<body>
+  <button id="r01">rec 01</button> <button id="r02">rec 02</button>
+  <canvas id="canv" width="1500" height="900"></canvas>
+  <canvas id="canv2" width="1500" height="900"></canvas>
+  <div id="content"></div>
+</body>
+</html>

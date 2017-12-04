@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body { background-color: #eee; }
+      .dot {
+        position: absolute;
+        width: 25px; height: 25px;
+        border-radius:25px;
+        background-color: orange;
+        opacity: 0.1;
+      }
+      .dot2 {
+        position: absolute;
+        width: 25px; height: 25px;
+        border-radius:25px;
+        background-color: chartreuse;
+        opacity: 0.1;
+      }
+
+      div {
+        position: absolute;
+        left: 0px; top: 0px;
+        width: 1000px;
+        margin-left: auto; margin-right: auto;
+      }
+    </style>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        $.getJSON("rec01.json", function(data){
+          $.each(data.user, function(i, d){
+
+            var v = '<span class="dot" style="top:';
+            v += d.y +'px; left:'+d.x+'px;"></span>';
+
+              $("#viz01").append(v);
+
+          });
+        });
+
+        $.getJSON("rec02.json", function(data){
+          $.each(data.user, function(i, d){
+
+            var v = '<span class="dot2" style="top:';
+            v += d.y +'px; left:'+d.x+'px;"></span>';
+
+              $("#viz02").append(v);
+
+          });
+        });
+
+
+        $('#r01').click(function(){
+          $("#viz01").fadeToggle();
+        });
+
+        $('#r02').click(function(){
+          $("#viz02").fadeToggle();
+        });
+
+      });
+
+    </script>
+  </head>
+  <body>
+    <button id="r01">rec 01</button> <button id="r02">rec 02</button>
+    <div id="viz01"></div>
+    <div id="viz02"></div>
+  </body>
+</html>

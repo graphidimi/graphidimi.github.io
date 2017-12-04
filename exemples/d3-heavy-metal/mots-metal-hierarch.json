@@ -1,0 +1,1434 @@
+[{
+  "name":"mots","children": [{
+    "name": "life",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "Black Sabbath, Vol. 4",
+        "class": "Album",
+        "children": [{
+          "name": "Patrick Meehan",
+          "class": "Producteur",
+          "children": [{
+            "name": "1972",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Black Sabbath",
+          "class": "Producteur",
+          "children": [{
+            "name": "1972",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }, {
+        "name": "Sabbath Bloody Sabbath",
+        "class": "Album",
+        "children": [{
+          "name": "Black Sabbath",
+          "class": "Producteur",
+          "children": [{
+            "name": "1973",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }, {
+        "name": "Sabotage",
+        "class": "Album",
+        "children": [{
+          "name": "Black Sabbath",
+          "class": "Producteur",
+          "children": [{
+            "name": "1975",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }, {
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "A Matter Of Life And Death",
+        "class": "Album",
+        "children": [{
+          "name": "Kevin Shirley",
+          "class": "Producteur",
+          "children": [{
+            "name": "2006",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Steve Harris",
+          "class": "Producteur",
+          "children": [{
+            "name": "2006",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }, {
+      "name": "Megadeth",
+      "class": "Artiste",
+      "children": [{
+        "name": "Countdown To Extinction",
+        "class": "Album",
+        "children": [{
+          "name": "Max Norman",
+          "class": "Producteur",
+          "children": [{
+            "name": "1992",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Dave Mustaine",
+          "class": "Producteur",
+          "children": [{
+            "name": "1992",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }, {
+        "name": "Th1rt3en",
+        "class": "Album",
+        "children": [{
+          "name": "Johnny K",
+          "class": "Producteur",
+          "children": [{
+            "name": "2011",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Dave Mustaine",
+          "class": "Producteur",
+          "children": [{
+            "name": "2011",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }, {
+      "name": "Metallica",
+      "class": "Artiste",
+      "children": [{
+        "name": "Death Magnetic",
+        "class": "Album",
+        "children": [{
+          "name": "Rick Rubin",
+          "class": "Producteur",
+          "children": [{
+            "name": "2008",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }, {
+      "name": "Pantera",
+      "class": "Artiste",
+      "children": [{
+        "name": "Vulgar Display Of Power",
+        "class": "Album",
+        "children": [{
+          "name": "Terry Date",
+          "class": "Producteur",
+          "children": [{
+            "name": "1992",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Vinnie Paul",
+          "class": "Producteur",
+          "children": [{
+            "name": "1992",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }, {
+        "name": "Cowboys From Hell",
+        "class": "Album",
+        "children": [{
+          "name": "Terry Date",
+          "class": "Producteur",
+          "children": [{
+            "name": "1990",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }, {
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "Dante XXI",
+        "class": "Album",
+        "children": [{
+          "name": "André Moraes",
+          "class": "Producteur",
+          "children": [{
+            "name": "2006",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Sepultura",
+          "class": "Producteur",
+          "children": [{
+            "name": "2006",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "time",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "Paranoid",
+        "class": "Album",
+        "children": [{
+          "name": "Rodger Bain",
+          "class": "Producteur",
+          "children": [{
+            "name": "1970",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }, {
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "Dance Of Death",
+        "class": "Album",
+        "children": [{
+          "name": "Kevin Shirley",
+          "class": "Producteur",
+          "children": [{
+            "name": "2003",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Steve Harris",
+          "class": "Producteur",
+          "children": [{
+            "name": "2003",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }, {
+        "name": "Somewhere In Time",
+        "class": "Album",
+        "children": [{
+          "name": "Martin Birch",
+          "class": "Producteur",
+          "children": [{
+            "name": "1986",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "world",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "Master of Reality",
+        "class": "Album",
+        "children": [{
+          "name": "Rodger Bain",
+          "class": "Producteur",
+          "children": [{
+            "name": "1971",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "die",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "Heaven & Hell",
+        "class": "Album",
+        "children": [{
+          "name": "Martin Birch",
+          "class": "Producteur",
+          "children": [{
+            "name": "1980",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }, {
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "Piece Of Mind",
+        "class": "Album",
+        "children": [{
+          "name": "Martin Birch",
+          "class": "Producteur",
+          "children": [{
+            "name": "1983",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "evil",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "Black Sabbath",
+        "class": "Album",
+        "children": [{
+          "name": "Rodger Bain",
+          "class": "Producteur",
+          "children": [{
+            "name": "1970",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "god",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "13",
+        "class": "Album",
+        "children": [{
+          "name": "Rick Rubin",
+          "class": "Producteur",
+          "children": [{
+            "name": "2013",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "death",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "Headless Cross",
+        "class": "Album",
+        "children": [{
+          "name": "Tony Iommi",
+          "class": "Producteur",
+          "children": [{
+            "name": "1989",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Cozy Powell",
+          "class": "Producteur",
+          "children": [{
+            "name": "1989",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }, {
+      "name": "Metallica",
+      "class": "Artiste",
+      "children": [{
+        "name": "Ride the Lightning",
+        "class": "Album",
+        "children": [{
+          "name": "Metallica",
+          "class": "Producteur",
+          "children": [{
+            "name": "1984",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Flemming Rasmussen",
+          "class": "Producteur",
+          "children": [{
+            "name": "1984",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }, {
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "Schizophrenia",
+        "class": "Album",
+        "children": [{
+          "name": "Sepultura",
+          "class": "Producteur",
+          "children": [{
+            "name": "1987",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Jeff Daniels",
+          "class": "Producteur",
+          "children": [{
+            "name": "1987",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "turn",
+    "class": "Mots",
+    "children": [{
+      "name": "Black Sabbath",
+      "class": "Artiste",
+      "children": [{
+        "name": "Mob Rules",
+        "class": "Album",
+        "children": [{
+          "name": "Martin Birch",
+          "class": "Producteur",
+          "children": [{
+            "name": "1981",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "charlotte",
+    "class": "Mots",
+    "children": [{
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "Iron Maiden",
+        "class": "Album",
+        "children": [{
+          "name": "Will Malone",
+          "class": "Producteur",
+          "children": [{
+            "name": "1980",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "run",
+    "class": "Mots",
+    "children": [{
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "The Number Of The Beast",
+        "class": "Album",
+        "children": [{
+          "name": "Martin Birch",
+          "class": "Producteur",
+          "children": [{
+            "name": "1982",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "seven",
+    "class": "Mots",
+    "children": [{
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "Seventh Son Of A Seventh Son",
+        "class": "Album",
+        "children": [{
+          "name": "Martin Birch",
+          "class": "Producteur",
+          "children": [{
+            "name": "1988",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "village",
+    "class": "Mots",
+    "children": [{
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "Powerslave",
+        "class": "Album",
+        "children": [{
+          "name": "Martin Birch",
+          "class": "Producteur",
+          "children": [{
+            "name": "1984",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "murders",
+    "class": "Mots",
+    "children": [{
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "Killers",
+        "class": "Album",
+        "children": [{
+          "name": "Martin Birch",
+          "class": "Producteur",
+          "children": [{
+            "name": "1981",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "dream",
+    "class": "Mots",
+    "children": [{
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "Brave New World",
+        "class": "Album",
+        "children": [{
+          "name": "Kevin Shirley",
+          "class": "Producteur",
+          "children": [{
+            "name": "2000",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Steve Harris",
+          "class": "Producteur",
+          "children": [{
+            "name": "2000",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "mother",
+    "class": "Mots",
+    "children": [{
+      "name": "Iron Maiden",
+      "class": "Artiste",
+      "children": [{
+        "name": "The Final Frontier",
+        "class": "Album",
+        "children": [{
+          "name": "Kevin Shirley",
+          "class": "Producteur",
+          "children": [{
+            "name": "2010",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Steve Harris",
+          "class": "Producteur",
+          "children": [{
+            "name": "2010",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "united",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "British Steel",
+        "class": "Album",
+        "children": [{
+          "name": "Tom Allom",
+          "class": "Producteur",
+          "children": [{
+            "name": "1980",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "stand",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Stained Class",
+        "class": "Album",
+        "children": [{
+          "name": "Dennis Mackay",
+          "class": "Producteur",
+          "children": [{
+            "name": "1978",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Judas Priest",
+          "class": "Producteur",
+          "children": [{
+            "name": "1978",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "leather",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Painkiller",
+        "class": "Album",
+        "children": [{
+          "name": "Judas Priest",
+          "class": "Producteur",
+          "children": [{
+            "name": "1990",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "night",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Defenders Of The Faith",
+        "class": "Album",
+        "children": [{
+          "name": "Tom Allom",
+          "class": "Producteur",
+          "children": [{
+            "name": "1984",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "pain",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Screaming For Vengeance",
+        "class": "Album",
+        "children": [{
+          "name": "Tom Allom",
+          "class": "Producteur",
+          "children": [{
+            "name": "1982",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "rose",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Sin After Sin",
+        "class": "Album",
+        "children": [{
+          "name": "Roger Glover",
+          "class": "Producteur",
+          "children": [{
+            "name": "1977",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Judas Priest",
+          "class": "Producteur",
+          "children": [{
+            "name": "1977",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "tyrant",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Sad Wings Of Destiny",
+        "class": "Album",
+        "children": [{
+          "name": "Jeffery Calvert",
+          "class": "Producteur",
+          "children": [{
+            "name": "1976",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Judas Priest",
+          "class": "Producteur",
+          "children": [{
+            "name": "1976",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "blood",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Redeemer Of Souls",
+        "class": "Album",
+        "children": [{
+          "name": "Mike Exeter",
+          "class": "Producteur",
+          "children": [{
+            "name": "2014",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Glenn Tipton",
+          "class": "Producteur",
+          "children": [{
+            "name": "2014",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "desert",
+    "class": "Mots",
+    "children": [{
+      "name": "Judas Priest",
+      "class": "Artiste",
+      "children": [{
+        "name": "Point Of Entry",
+        "class": "Album",
+        "children": [{
+          "name": "Judas Priest",
+          "class": "Producteur",
+          "children": [{
+            "name": "1981",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Tom Allom",
+          "class": "Producteur",
+          "children": [{
+            "name": "1981",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "island",
+    "class": "Mots",
+    "children": [{
+      "name": "Megadeth",
+      "class": "Artiste",
+      "children": [{
+        "name": "Peace Sells... But Who's Buying?",
+        "class": "Album",
+        "children": [{
+          "name": "Dave Mustaine",
+          "class": "Producteur",
+          "children": [{
+            "name": "1986",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Randy Burns",
+          "class": "Producteur",
+          "children": [{
+            "name": "1986",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "master",
+    "class": "Mots",
+    "children": [{
+      "name": "Megadeth",
+      "class": "Artiste",
+      "children": [{
+        "name": "Rust In Peace",
+        "class": "Album",
+        "children": [{
+          "name": "Dave Mustaine",
+          "class": "Producteur",
+          "children": [{
+            "name": "1990",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Mike Clink",
+          "class": "Producteur",
+          "children": [{
+            "name": "1990",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }, {
+      "name": "Metallica",
+      "class": "Artiste",
+      "children": [{
+        "name": "Master of Puppets",
+        "class": "Album",
+        "children": [{
+          "name": "Metallica",
+          "class": "Producteur",
+          "children": [{
+            "name": "1986",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Flemming Rasmussen",
+          "class": "Producteur",
+          "children": [{
+            "name": "1986",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "dead",
+    "class": "Mots",
+    "children": [{
+      "name": "Megadeth",
+      "class": "Artiste",
+      "children": [{
+        "name": "The System Has Failed",
+        "class": "Album",
+        "children": [{
+          "name": "Dave Mustaine",
+          "class": "Producteur",
+          "children": [{
+            "name": "2004",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Jeff Balding",
+          "class": "Producteur",
+          "children": [{
+            "name": "2004",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "dog",
+    "class": "Mots",
+    "children": [{
+      "name": "Megadeth",
+      "class": "Artiste",
+      "children": [{
+        "name": "Endgame",
+        "class": "Album",
+        "children": [{
+          "name": "Dave Mustaine",
+          "class": "Producteur",
+          "children": [{
+            "name": "2009",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Andy Sneap",
+          "class": "Producteur",
+          "children": [{
+            "name": "2009",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "play",
+    "class": "Mots",
+    "children": [{
+      "name": "Megadeth",
+      "class": "Artiste",
+      "children": [{
+        "name": "United Abominations",
+        "class": "Album",
+        "children": [{
+          "name": "Dave Mustaine",
+          "class": "Producteur",
+          "children": [{
+            "name": "2007",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Jeff Balding",
+          "class": "Producteur",
+          "children": [{
+            "name": "2007",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "thing",
+    "class": "Mots",
+    "children": [{
+      "name": "Megadeth",
+      "class": "Artiste",
+      "children": [{
+        "name": "Cryptic Writings",
+        "class": "Album",
+        "children": [{
+          "name": "Dann Huff",
+          "class": "Producteur",
+          "children": [{
+            "name": "1997",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Dave Mustaine",
+          "class": "Producteur",
+          "children": [{
+            "name": "1997",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "metal",
+    "class": "Mots",
+    "children": [{
+      "name": "Metallica",
+      "class": "Artiste",
+      "children": [{
+        "name": "Kill 'Em All",
+        "class": "Album",
+        "children": [{
+          "name": "Paul Curcio",
+          "class": "Producteur",
+          "children": [{
+            "name": "1983",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Mark Whitaker",
+          "class": "Producteur",
+          "children": [{
+            "name": "1983",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "shortest",
+    "class": "Mots",
+    "children": [{
+      "name": "Metallica",
+      "class": "Artiste",
+      "children": [{
+        "name": "...And Justice for All",
+        "class": "Album",
+        "children": [{
+          "name": "Metallica",
+          "class": "Producteur",
+          "children": [{
+            "name": "1988",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Flemming Rasmussen",
+          "class": "Producteur",
+          "children": [{
+            "name": "1988",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "struggle",
+    "class": "Mots",
+    "children": [{
+      "name": "Metallica",
+      "class": "Artiste",
+      "children": [{
+        "name": "Metallica",
+        "class": "Album",
+        "children": [{
+          "name": "Bob Rock",
+          "class": "Producteur",
+          "children": [{
+            "name": "1991",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "biotech",
+    "class": "Mots",
+    "children": [{
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "Chaos A.D.",
+        "class": "Album",
+        "children": [{
+          "name": "Andy Wallace",
+          "class": "Producteur",
+          "children": [{
+            "name": "1993",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "born",
+    "class": "Mots",
+    "children": [{
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "Arise",
+        "class": "Album",
+        "children": [{
+          "name": "Sepultura",
+          "class": "Producteur",
+          "children": [{
+            "name": "1991",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Scott Burns",
+          "class": "Producteur",
+          "children": [{
+            "name": "1991",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "hate",
+    "class": "Mots",
+    "children": [{
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "Beneath The Remains",
+        "class": "Album",
+        "children": [{
+          "name": "Scott Burns",
+          "class": "Producteur",
+          "children": [{
+            "name": "1989",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Sepultura",
+          "class": "Producteur",
+          "children": [{
+            "name": "1989",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "roots",
+    "class": "Mots",
+    "children": [{
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "Roots",
+        "class": "Album",
+        "children": [{
+          "name": "Ross Robinson",
+          "class": "Producteur",
+          "children": [{
+            "name": "1996",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Sepultura",
+          "class": "Producteur",
+          "children": [{
+            "name": "1996",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "mind",
+    "class": "Mots",
+    "children": [{
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "A-Lex",
+        "class": "Album",
+        "children": [{
+          "name": "Stanley Soares",
+          "class": "Producteur",
+          "children": [{
+            "name": "2009",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }, {
+          "name": "Sepultura",
+          "class": "Producteur",
+          "children": [{
+            "name": "2009",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "walk",
+    "class": "Mots",
+    "children": [{
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "Roorback",
+        "class": "Album",
+        "children": [{
+          "name": "Steve Evetts",
+          "class": "Producteur",
+          "children": [{
+            "name": "2003",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "zombie",
+    "class": "Mots",
+    "children": [{
+      "name": "Sepultura",
+      "class": "Artiste",
+      "children": [{
+        "name": "The Mediator Between Head And Hands Must Be The Heart",
+        "class": "Album",
+        "children": [{
+          "name": "Ross Robinson",
+          "class": "Producteur",
+          "children": [{
+            "name": "2013",
+            "class": "Année",
+            "size": 1,
+            "color": null,
+            "label": null
+          }]
+        }]
+      }]
+    }]
+  }]
+}
+]
